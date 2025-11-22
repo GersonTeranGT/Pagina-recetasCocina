@@ -1,0 +1,229 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #fffaf3;
+}
+
+/*cabecera*/
+#header {
+    background-color: #25855a;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 30px;
+    gap: 15px;
+}
+
+/*titulo de la pagina*/
+#headerTitle {
+    font-size: 1.5rem;
+    margin: 0;
+    flex: 1 1 auto;
+}
+
+/*barra de navegacion*/
+#nav .navList {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+#nav .navItem {
+    margin: 0 10px;
+}
+
+#nav .navItem a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#nav .navItem a:hover {
+    background-color: #51b04a;
+}
+
+/*barra de busqueda*/
+#searchForm {
+    display: flex;
+    flex: 1 1 250px;
+}
+
+#searchInput {
+    flex: 1 1 auto;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+}
+
+#searchBtn {
+    background-color: #0dac17;
+    border: none;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#searchBtn:hover {
+    background-color: #36ca20;
+}
+/*contenedor de bienvenida*/
+#welcome{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+/*imagen*/
+#welcomeImg{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+/*el banner*/
+.bannerText{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    border-radius: 10px;
+}
+.bannerText h2{
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+.bannerText p{
+    font-size: 1.2rem;
+    margin: 0;
+}
+/*tarjetas de informacion*/
+#sectionCards{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 20px;
+    background-color: #fff3e6;
+}
+.textCards{
+    flex: 1 1 300px;
+    max-width: 600px;
+    color: #4a2c20;
+}
+.textCards h2{
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+.textCards p{
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+.imgCards{
+    flex: 1 1 300px;
+    max-width: 500px;
+}
+.imgCards img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/*VALORES*/
+#values{
+    background-color: #fffaf3;
+    padding: 40px 20px;
+    text-align: center;
+}
+.valuesTitle{
+    font-size: 2rem;
+    color: #4a2c20;
+    margin-bottom: 30px;
+}
+.containerValues{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+.valueCard{
+    flex: 1 1 250px;
+    max-width: 300px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.valueCard img{
+    width: 270px;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+.valueCard h3{
+    font-size: 1.3rem;
+    color: #25855a;
+    margin-bottom: 10px;
+}
+.valueCard p{
+    font-size: 1rem;
+    color: #4a2c20;
+    line-height: 1.5;
+}
+/*CATEGORIAS*/
+#categories{
+    background-color: #fff3e6;
+    padding: 40px 20px;
+    text-align: center;
+}
+.categoriesTitle{
+    font-size: 2rem;
+    color: #4a2c20;
+    margin-bottom: 30px;
+}
+.categoriesGrid{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+.categoryCard{
+    flex: 1 1 200px;
+    max-width: 250px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+.categoryCard:hover{
+    transform: scale(1.05);
+}
+.categoryCard img{
+    width: 60px;
+    height: auto;
+    margin-bottom: 15px;
+}
+.categoryCard h3{
+    font-size: 1.2rem;
+    color: #ff6f20;
+    margin-bottom: 10px;
+}
+.categoryCard p{
+    font-size: 1rem;
+    color: #4a2c20;
+    line-height: 1.4;
+}
