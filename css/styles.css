@@ -6,7 +6,7 @@ body {
 
 /*cabecera*/
 #header {
-    background-color: #25855a;
+    background-color: #0d6b70;
     color: white;
     display: flex;
     flex-wrap: wrap;
@@ -18,9 +18,16 @@ body {
 
 /*titulo de la pagina*/
 #headerTitle {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
     font-size: 1.5rem;
     margin: 0;
-    flex: 1 1 auto;
+
+}
+.titleIcon{
+    width: 50px;
+    height: auto;
 }
 
 /*barra de navegacion*/
@@ -166,6 +173,10 @@ body {
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+.valueCard:hover{
+    transform: scale(1.05);
 }
 .valueCard img{
     width: 270px;
@@ -226,4 +237,60 @@ body {
     font-size: 1rem;
     color: #4a2c20;
     line-height: 1.4;
+}
+/*FOOTER*/
+#footer{
+    background-color: white;
+    color: black;
+    padding: 30px 30px;
+}
+.containerFooter{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+.footerLeft{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1 1 250px;
+}
+.footerLogo{
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+.socialLinks a{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin: 5px 10px;
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+.socialLinks a:hover{
+    color: #ff914d;
+}
+.socialLinks i{
+    font-size: 1.1rem;
+}
+.footerRight{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1 1 250px;
+}
+.morpheusLogo{
+    width: 160px;
+    height: auto;
+    margin-bottom: 10px;
+}
+.credit{
+    font-size: 0.9rem;
+    color: black;
+    margin: 0;
 }
