@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#start {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    text-align: left;
+}
+
+#outstanding {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    text-align: left;
+}
+
+.start-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.text-content {
+    max-width: 800px;
+}
+
+.title-h1 {
+    font-size: 2.5rem;
+    color: #000000;
+    margin-bottom: 15px;
+    font-weight: 700;
+    text-align: left;
+}
+
+.title-h4 {
+    font-size: 1.6rem;
+    color: #7f8c8d;
+    font-weight: 400;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.image-container {
+    width: 100%;
+    margin: 20px 0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.image-container img:hover {
+    transform: scale(1.02);
+}
+
+.description {
+    font-size: 1.2rem;
+    color: #000000;
+    line-height: 1.8;
+    max-width: 10000px;
+    margin: 0;
+    text-align: center;
+}
+
+.containerValuesRecetas{
+    display: flex;
+    gap: 30px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .title-h1 {
+        font-size: 2.5rem;
+    }
+
+    .title-h4 {
+        font-size: 1.3rem;
+    }
+
+    .image-container {
+        width: 90%;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+}
