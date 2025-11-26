@@ -24,10 +24,6 @@
                 <li class="navItem"><a href="/pages/nosotros.html" id="us">Nosotros</a></li>
             </ul>
         </nav>
-        <form id="search-form">
-            <input type="text" id="searchInput" placeholder="Buscar receta...">
-            <button type="submit" id="searchBtn">Buscar</button>
-        </form>
     </header>
     <section id="start">
         <div class="start-content">
@@ -52,27 +48,226 @@
         <div class="start-content">
             <div class="text-content">
                 <h1 class="title-h1">Recetas de Temporada</h1>
-                <div class="containerValuesRecetas">
-                    <div class="valueCard">
-                        <img src="https://www.shutterstock.com/image-photo/grilled-chicken-breast-cooked-vegetables-600nw-2618443825.jpg" alt="Plato1">
-                        <h3>Pollo a la plancha</h3>
-                        <p>Un plato sencillo acompañado de un buen pedazo de proteina y una ensalada saludable.</p>
+                <div class="cards-container">
+                    <!-- Tarjeta 1 -->
+                    <div class="recipe-card">
+                        <img src="https://www.shutterstock.com/image-photo/grilled-chicken-breast-cooked-vegetables-600nw-2618443825.jpg"
+                            alt="Pollo a la plancha">
+                        <div class="recipe-card-content">
+                            <h3>Pollo a la plancha</h3>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <p>Un plato sencillo acompañado de un buen pedazo de proteína y una ensalada saludable.</p>
+                        </div>
                     </div>
-                    <div class="valueCard">
-                        <img src="https://media.istockphoto.com/id/1472680285/es/foto/comida-saludable-con-pollo-a-la-parrilla-arroz-ensalada-y-verduras-servida-por-una-mujer.jpg?s=612x612&w=0&k=20&c=RafCzs-2byU6HSC2hbEkT07ZsZ5Q7j_XfAxCsXT6_f0=" alt="Plato2">
-                        <h3>Ensalada rusa con vainitas</h3>
-                        <p>Un plato balanceado entre proteina, vegetales y calorias para una dieta balanceada.</p>
+
+                    <!-- Tarjeta 2 -->
+                    <div class="recipe-card">
+                        <img src="https://media.istockphoto.com/id/1472680285/es/foto/comida-saludable-con-pollo-a-la-parrilla-arroz-ensalada-y-verduras-servida-por-una-mujer.jpg?s=612x612&w=0&k=20&c=RafCzs-2byU6HSC2hbEkT07ZsZ5Q7j_XfAxCsXT6_f0="
+                            alt="Ensalada rusa con vainitas">
+                        <div class="recipe-card-content">
+                            <h3>Ensalada rusa con vainitas</h3>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <p>Un plato balanceado entre proteína, vegetales y calorías para una dieta balanceada.</p>
+                        </div>
                     </div>
-                    <div class="valueCard">
-                        <img src="https://c.files.bbci.co.uk/DBBF/production/_105055265_bandejapaisa.jpg" alt="Plato3">
-                        <h3>Costilla de cerdo al jugo</h3>
-                        <p>Este plato supera las 2000 calorias en uno solo, perfecto para darte un gusto y perder la dieta!</p>
+
+                    <!-- Tarjeta 3 -->
+                    <div class="recipe-card">
+                        <img src="https://c.files.bbci.co.uk/DBBF/production/_105055265_bandejapaisa.jpg"
+                            alt="Costilla de cerdo al jugo">
+                        <div class="recipe-card-content">
+                            <h3>Costilla de cerdo al jugo</h3>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p>Este plato supera las 2000 calorías en uno solo, perfecto para darte un gusto y perder la
+                                dieta!</p>
+                        </div>
                     </div>
-                    
                 </div>
             </div>
         </div>
     </section>
+
+    <section id="recetas">
+        <div class="start-content">
+            <div class="text-content">
+                <h1 class="title-h1">Recetas</h1>
+                <div class="search-container">
+                    <input type="text" id="recipeSearch" placeholder="Buscar recetas por nombre...">
+                    <button id="searchButton">🔍</button>
+                </div>
+                <div class="cards-container">
+                    <!-- Fila 1 - Tarjeta 1 -->
+                    <div class="recipe-card">
+                        <img src="/images/sancocho_res.png" alt="Sancocho de res">
+                        <div class="recipe-card-content">
+                            <h3>Sancocho de res</h3>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <p>Un nutritivo caldo colombiano con carne, yuca, plátano y maíz, lleno de sabor y
+                                tradición.</p>
+                        </div>
+                    </div>
+
+                    <!-- Fila 1 - Tarjeta 2 -->
+                    <div class="recipe-card">
+                        <img src="/images/sopa_de_menestron.png" alt="Sopa de menestron">
+                        <div class="recipe-card-content">
+                            <h3>Sopa de menestron</h3>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <p>Sopa peruana espesa con carne, fideos y abundantes verduras, ideal para días fríos.</p>
+                        </div>
+                    </div>
+
+                    <!-- Fila 1 - Tarjeta 3 -->
+                    <div class="recipe-card">
+                        <img src="/images/consome_de_verduras.png" alt="Consome de verduras">
+                        <div class="recipe-card-content">
+                            <h3>Consome de verduras</h3>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p>Caldo ligero y reconfortante cargado de vegetales frescos, perfecto como entrada o comida
+                                ligera.</p>
+                        </div>
+                    </div>
+
+                    <!-- Fila 2 - Tarjeta 1 -->
+                    <div class="recipe-card">
+                        <img src="/images/tallarines_rojos_con_atun.png" alt="Tallarines rojos con atun">
+                        <div class="recipe-card-content">
+                            <h3>Tallarines rojos con atun</h3>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <p>Pasta en salsa de tomate con atún, una combinación rápida, económica y llena de
+                                proteínas.</p>
+                        </div>
+                    </div>
+
+                    <!-- Fila 2 - Tarjeta 2 -->
+                    <div class="recipe-card">
+                        <img src="/images/tacos_de_alambre.png" alt="Tacos de alambre">
+                        <div class="recipe-card-content">
+                            <h3>Tacos de alambre</h3>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <p>Tacos mexicanos rellenos de carne asada, pimientos y cebolla, listos en minutos.</p>
+                        </div>
+                    </div>
+
+                    <!-- Fila 2 - Tarjeta 3 -->
+                    <div class="recipe-card">
+                        <img src="/images/pechito_de_cerdo_al_horno.png" alt="Pechito de cerdo al horno">
+                        <div class="recipe-card-content">
+                            <h3>Pechito de cerdo al horno</h3>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p>Jugoso y tierno, horneado lentamente con hierbas aromáticas para un sabor intenso.</p>
+                        </div>
+                    </div>
+
+                    <!-- Fila 3 - Tarjeta 1 -->
+                    <div class="recipe-card">
+                        <img src="/images/carne_mechada_chilena.png" alt="Carne mechada chilena">
+                        <div class="recipe-card-content">
+                            <h3>Carne mechada chilena</h3>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <p>Carne de res desmenuzada en una sabrosa salsa de cebolla, ideal para sandwiches o
+                                acompañamientos.</p>
+                        </div>
+                    </div>
+
+                    <!-- Fila 3 - Tarjeta 2 -->
+                    <div class="recipe-card">
+                        <img src="/images/pollada_con_arroz.png" alt="Pollo con arroz">
+                        <div class="recipe-card-content">
+                            <h3>Pollo con arroz</h3>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <p>Clásico comfort food donde el pollo se cocina junto al arroz absorbiendo todos sus jugos.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Fila 3 - Tarjeta 3 -->
+                    <div class="recipe-card">
+                        <img src="/images/pure_de_papa_con_pollo.png" alt="Pure de papa con pollo">
+                        <div class="recipe-card-content">
+                            <h3>Pure de papa con pollo</h3>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <p>Crema suave de papas acompañada de pollo guisado, la combinación perfecta de texturas.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer id="footer">
         <div class="containerFooter">
             <div class="footerLeft">
@@ -90,6 +285,8 @@
                 <p class="credit">Diseñado por Morpheus Enterprise</p>
             </div>
         </div>
+        <!--Script para la barra de busqueda-->
+        <script src="/js/recetas.js"></script>
     </footer>
 </body>
 
