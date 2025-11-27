@@ -26,10 +26,9 @@
         </nav>
     </header>
     <main>
-        <!-- Título principal -->
-        <h1 id="tituloR1">Cómo hacer arroz frito con huevo</h1>
-
-        <!-- Ingredientes -->
+        <!--Título principal-->
+        <h2 id="tituloR1">Cómo hacer arroz frito con huevo</h2>
+        <!--seccion de los ingredientes-->
         <section id="ingredientes">
             <h2>Ingredientes</h2>
             <button class="toggle-btn" aria-controls="lista-ingredientes" aria-expanded="true">
@@ -38,14 +37,14 @@
             <ul id="lista-ingredientes" class="ingredientes-list">
                 <li>1 taza de arroz</li>
                 <li>2 tazas de agua</li>
-                <li>1 huevo</li>
+                <li>3 huevos</li>
+                <li>Salsa de soya</li>
                 <li>Sal al gusto</li>
                 <li>Chorrito de aceite</li>
                 <li>Opcional: queso, tomate, cilantro</li>
             </ul>
         </section>
-
-        <!-- Pasos -->
+        <!--Pasos-->
         <section id="pasos">
             <h2>Pasos</h2>
             <button class="toggle-btn" aria-controls="lista-pasos" aria-expanded="false">
@@ -58,6 +57,7 @@
                         <button class="error-btn">Advertencia</button>
                     </div>
                     <p class="mensaje-error" hidden></p>
+                    <img src="/images/Lavar-arroz-ciencia-cocineros.jpg" alt="Lavado de arroz" class="imagen-paso">
                 </article>
 
                 <article class="paso" data-error="Si olvidas la sal, quedará sin sabor.">
@@ -66,35 +66,71 @@
                         <button class="error-btn">Advertencia</button>
                     </div>
                     <p class="mensaje-error" hidden></p>
+                    <img src="/images/agregarArroz4.jpg" alt="Agregar el arroz, una pisca de sal y agua en una olla."
+                        class="imagen-paso">
                 </article>
 
-                <article class="paso" data-error="Si te distraes, se quema.">
+                <article class="paso" data-error="No apagar antes ni después.">
                     <div class="paso-header">
-                        <p>Deja hervir y tapa cuando el agua se consuma.</p>
-                    <button class="error-btn">Advertencia</button>
+                        <p>Deja hervir y tapa. Apaga el fuego cuando el agua se consuma y deja reposar.</p>
+                        <button class="error-btn">Advertencia</button>
                     </div>
                     <p class="mensaje-error" hidden></p>
+                    <img src="/images/dejarHervir.jpg" alt="Dejar hervir." class="imagen-paso">
+                    <img src="/images/taparOlla.jpg" alt="Tapar cuando el agua se consuma." class="imagen-paso">
                 </article>
 
                 <article class="paso" data-error="Si cae cáscara, tendrás calcio extra.">
                     <div class="paso-header">
-                        <p>Fríe el huevo con un chorrito de aceite.</p>
-                    <button class="error-btn">Advertencia</button>
+                        <p>Rompe los huevos en un tazón y bátelos. Despues en un sartén con un chorrito de aceite agrega
+                            los huevos y revuelve.</p>
+                        <button class="error-btn">Advertencia</button>
                     </div>
                     <p class="mensaje-error" hidden></p>
+                    <img src="/images/batirHuevos.png" alt="Batir los huevos" class="imagen-paso">
+                    <img src="/images/aceiteChorro.jpg" alt="Agregar aceite al sartén" class="imagen-paso">
+                    <img src="/images/huevosRevueltos.jpg" alt="Revolver los huevos" class="imagen-paso">
                 </article>
 
-                <article class="paso" data-error="Si usas demasiado aceite, el huevo nada.">
+                <article class="paso" data-error="No te distraigas ni por un segundo si no, será arroz quemado :).">
                     <div class="paso-header">
-                        <p>Sirve el arroz y coloca el huevo encima.</p>
-                    <button class="error-btn">Advertencia</button>
+                        <p>Por otro lado, en un sartén aparte también con un chorrito de aceite agrega el arroz y
+                            revuelve por unos minutos.</p>
+                        <button class="error-btn">Advertencia</button>
                     </div>
                     <p class="mensaje-error" hidden></p>
+                    <img src="/images/arrozSarten.jpg" alt="Arroz en un sarten con un chorrito de aceite." class="imagen-paso">
+                </article>
+
+                <article class="paso" data-error="No te pases mucho con la salsa de soya, podría quedar muy salado.">
+                    <div class="paso-header">
+                        <p>Una vez hayan pasado unos minutos agrega la salsa de soya al gusto y revuelve.</p>
+                        <button class="error-btn">Advertencia</button>
+                    </div>
+                    <p class="mensaje-error" hidden></p>
+                    <img src="/images/agregarSalsa.jpg" alt="Agregar salsa de soya al arroz." class="imagen-paso">
+                </article>
+
+                <article class="paso" data-error="Mezcla hasta que el huevo esté bien incorporado.">
+                    <div class="paso-header">
+                        <p>Por último, agrega los huevos revueltos y vuelve a revolver, otra vez.</p>
+                        <button class="error-btn">Advertencia</button>
+                    </div>
+                    <p class="mensaje-error" hidden></p>
+                    <img src="/images/arrozHuevo.jpg" alt="Agregar los huevos al arroz." class="imagen-paso">
+                </article>
+
+                <article class="paso" data-error="Cuidado que esta caliente. Y buen provecho!">
+                    <div class="paso-header">
+                        <p>Y liiistooooo!!! Sirve el arroz en un plato y acompáñalo con una buena bebida.</p>
+                        <button class="error-btn">Advertencia</button>
+                    </div>
+                    <p class="mensaje-error" hidden></p>
+                    <img src="/images/platoListo.jpeg" alt="Servir en un plato el arroz" class="imagen-paso">
                 </article>
             </div>
         </section>
-
-        <!-- Consejos -->
+        <!--consejos-->
         <section id="consejos">
             <h2>Consejos</h2>
             <ul class="consejos-list">
@@ -104,11 +140,10 @@
                 <li>No olvides tomar la foto para Instagram.</li>
             </ul>
         </section>
-
-        <!-- Video -->
+        <!--video-->
         <section id="video">
-            <h2>Video</h2>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/Wnas8CtHJtA?si=gyKDzDShReVGi8_4"
+            <h2>Video para una ayuda extra</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/xcq-B5_bdcc?si=YGRxa9NajDWup7c6"
                 title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
