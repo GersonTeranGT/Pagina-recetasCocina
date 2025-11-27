@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arroz frito con huevo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <!--FAVICON-->
+    <link rel="icon" href="/images/transparenticonmini.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/receta1.css">
+</head>
+
+<body>
+    <header id="header">
+        <h1 id="headerTitle"><img src="/images/transparentlogo.png" alt="Icono de la pagina" class="titleIcon">Arroz con
+            huevo</h1>
+        <nav id="nav">
+            <ul class="navList">
+                <li class="navItem"><a href="/index.html" id="home">Inicio</a></li>
+                <li class="navItem"><a href="/pages/recetas.html" id="recipes">Recetas</a></li>
+                <li class="navItem"><a href="/pages/nosotros.html" id="us">Nosotros</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Título principal -->
+        <h1 id="tituloR1">Cómo hacer arroz frito con huevo</h1>
+
+        <!-- Ingredientes -->
+        <section id="ingredientes">
+            <h2>Ingredientes</h2>
+            <button class="toggle-btn" aria-controls="lista-ingredientes" aria-expanded="true">
+                Mostrar / Ocultar
+            </button>
+            <ul id="lista-ingredientes" class="ingredientes-list">
+                <li>1 taza de arroz</li>
+                <li>2 tazas de agua</li>
+                <li>1 huevo</li>
+                <li>Sal al gusto</li>
+                <li>Chorrito de aceite</li>
+                <li>Opcional: queso, tomate, cilantro</li>
+            </ul>
+        </section>
+
+        <!-- Pasos -->
+        <section id="pasos">
+            <h2>Pasos</h2>
+            <button class="toggle-btn" aria-controls="lista-pasos" aria-expanded="false">
+                Mostrar / Ocultar
+            </button>
+            <div id="lista-pasos" class="pasos-list" hidden>
+                <article class="paso" data-error="No lavar el arroz puede dejarlo arenoso.">
+                    <div class="paso-header">
+                        <p>Enjuaga el arroz como si lavaras tus pecados culinarios.</p>
+                        <button class="error-btn">Advertencia</button>
+                    </div>
+                    <p class="mensaje-error" hidden></p>
+                </article>
+
+                <article class="paso" data-error="Si olvidas la sal, quedará sin sabor.">
+                    <div class="paso-header">
+                        <p>Agrega arroz, agua y sal a la olla.</p>
+                        <button class="error-btn">Advertencia</button>
+                    </div>
+                    <p class="mensaje-error" hidden></p>
+                </article>
+
+                <article class="paso" data-error="Si te distraes, se quema.">
+                    <div class="paso-header">
+                        <p>Deja hervir y tapa cuando el agua se consuma.</p>
+                    <button class="error-btn">Advertencia</button>
+                    </div>
+                    <p class="mensaje-error" hidden></p>
+                </article>
+
+                <article class="paso" data-error="Si cae cáscara, tendrás calcio extra.">
+                    <div class="paso-header">
+                        <p>Fríe el huevo con un chorrito de aceite.</p>
+                    <button class="error-btn">Advertencia</button>
+                    </div>
+                    <p class="mensaje-error" hidden></p>
+                </article>
+
+                <article class="paso" data-error="Si usas demasiado aceite, el huevo nada.">
+                    <div class="paso-header">
+                        <p>Sirve el arroz y coloca el huevo encima.</p>
+                    <button class="error-btn">Advertencia</button>
+                    </div>
+                    <p class="mensaje-error" hidden></p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Consejos -->
+        <section id="consejos">
+            <h2>Consejos</h2>
+            <ul class="consejos-list">
+                <li>Agrega mantequilla para más sabor.</li>
+                <li>Decora con una hoja de cilantro.</li>
+                <li>Puedes acompañarlo con aguacate o atún.</li>
+                <li>No olvides tomar la foto para Instagram.</li>
+            </ul>
+        </section>
+
+        <!-- Video -->
+        <section id="video">
+            <h2>Video</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Wnas8CtHJtA?si=gyKDzDShReVGi8_4"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <div class="containerFooter">
+            <div class="footerLeft">
+                <img src="/images/transparentseclogo.png" alt="Logo sabor del dia" class="footerLogo">
+                <div class="socialLinks">
+                    <a target="_blank" href="https://www.facebook.com/henrycavill"><i
+                            class="fab fa-facebook-f"></i>Facebook</a>
+                    <a target="_blank" href="https://www.youtube.com/"><i class="fab fa-youtube"></i>YouTube</a>
+                    <a target="_blank" href="https://www.instagram.com/henrycavill/"><i
+                            class="fab fa-instagram"></i>Instagram</a>
+                </div>
+            </div>
+            <div class="footerRight">
+                <img src="/images/morpheusLogo.png" alt="Logo Morpheus" class="morpheusLogo">
+                <p class="credit">Diseñado por Morpheus Enterprise</p>
+            </div>
+        </div>
+    </footer>
+    <script src="/js/receta1.js"></script>
+</body>
+
+</html>
