@@ -19,7 +19,7 @@ body {
     align-items: center;
     padding: 20px;
     gap: 20px;
-    background: #446e74;
+    background: #0d6b70;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -89,7 +89,7 @@ body {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     background-color: white;
-    /* Asegurar que la tarjeta mantenga sus dimensiones */
+    /*Asegurar que la tarjeta mantenga sus dimensiones*/
     height: fit-content;
     min-height: 400px;
 }
@@ -97,6 +97,7 @@ body {
 .recipe-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    background-color: #f9f9f9;
 }
 
 .recipe-card img {
@@ -133,6 +134,12 @@ body {
     color: #2c3e50;
     font-weight: 600;
     margin: 0;
+}
+
+.cardLink{
+    text-decoration: none;
+    color: inherit;
+    display: block;
 }
 
 .rating {
@@ -236,34 +243,7 @@ body {
     text-align: center;
 }
 
-/* FOOTER GRID */
-.containerFooter {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    align-items: center;
-    gap: 30px;
-    padding: 30px;
-}
 
-.footerLeft {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    align-items: center;
-    gap: 20px;
-}
-
-.socialLinks {
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    gap: 15px;
-}
-
-.footerRight {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    align-items: center;
-    gap: 10px;
-}
 
 /* RESPONSIVE DESIGN CON GRID */
 @media (max-width: 1024px) {

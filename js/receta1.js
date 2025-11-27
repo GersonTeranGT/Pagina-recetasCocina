@@ -1,3 +1,6 @@
+
+
+
 //funcion para alternar visivilidad
 function toggleSection(button, targetId) {
     const target = document.getElementById(targetId);
