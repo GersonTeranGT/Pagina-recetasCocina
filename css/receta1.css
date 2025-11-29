@@ -91,29 +91,33 @@ section:hover {
 }
 
 .imagen-paso {
-  width: 100%;              /* ocupa todo el ancho disponible */
-  max-width: 500px;         /* límite para que no se estire demasiado */
-  height: auto;             /* mantiene proporción original */
-  border-radius: 12px;      /* esquinas redondeadas */
-  margin-top: 12px;         /* espacio respecto al texto */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* sombra suave */
-  object-fit: cover;        /* recorta si la imagen es muy alta */
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 12px;
+    margin-top: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    object-fit: cover;
 }
+
 /* Fila con texto y botón */
 .paso-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 /*texto*/
 .paso-header p {
     margin: 0;
     flex: 1;
 }
+
 .paso p {
     margin: 0;
     flex: 1;
 }
+
 /*mensajes de error*/
 .mensaje-error {
     color: #d32f2f;
