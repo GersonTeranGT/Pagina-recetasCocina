@@ -1,7 +1,11 @@
 /*Tipografía y base*/
 body {
     font-family: 'Segoe UI', Roboto, sans-serif;
-    background: #fff3e6;
+    background-image: url('/images/');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
     color: #333;
     margin: 0;
     padding: 0;
