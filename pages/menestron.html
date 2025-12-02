@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menestrón</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <!--FAVICON-->
+    <link rel="icon" href="/images/transparenticonmini.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/receta1.css">
+</head>
+
+<body>
+    <header id="header">
+        <h1 id="headerTitle"><img src="/images/transparentlogo.png" alt="Icono de la pagina" class="titleIcon">Sopa de menestrón</h1>
+        <nav id="nav">
+            <ul class="navList">
+                <li class="navItem"><a href="/index.html" id="home">Inicio</a></li>
+                <li class="navItem"><a href="/pages/recetas.html" id="recipes">Recetas</a></li>
+                <li class="navItem"><a href="/pages/nosotros.html" id="us">Nosotros</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!--Titulo principal-->
+        <h2 id="tituloR1">Cómo preparar una deliciosa sopa de menestrón</h2>
+        <p>Prepara una cálida y deliciosa sopa de menetrón para estor días fríos de invierno.</p>
+        <!--seccion de los ingredientes-->
+        <section id="ingredientes">
+            <h2>Ingredientes</h2>
+            <button class="toggle-btn" aria-controls="lista-ingredientes" aria-expanded="true">
+                Mostrar / Ocultar
+            </button>
+            <ul id="lista-ingredientes" class="ingredientes-list">
+                <li>1 kilogramo de pecho o punta de pecho de res</li>
+                <li>3 papas blancas</li>
+                <li>2 choclos en rodajas</li>
+                <li>150 gramos de fideo macarrón o canuto</li>
+                <li>1 trozo de zapallo</li>
+                <li>150 gramos de habas peladas</li>
+                <li>1 cebolla</li>
+                <li>3 dientes de ajo</li>
+                <li>100 gramos de espinaca</li>
+                <li>1/2 puñado de albahaca</li>
+                <li>Sal al gusto</li>
+            </ul>
+        </section>
+        <!--Pasos-->
+        <section id="pasos">
+            <h2>Pasos</h2>
+            <button class="toggle-btn" aria-controls="lista-pasos" aria-expanded="false">
+                Mostrar / Ocultar
+            </button>
+            <div id="lista-pasos" class="pasos-list" hidden>
+                <article class="paso" data-error="No lavar el arroz puede dejarlo arenoso.">
+                    <div class="paso-header">
+                        <p>Empieza colocando en una olla grande la carne cortada en trozos grandes. Cubre con abundante
+                            agua, sazona con una cucharadita de sal y tapa. Deja hervir por 2 horas y media o hasta que
+                            la carne esté muy suave. Si deseas reducir el tiempo de cocción puedes utilizar una olla a
+                            presión reduciendo el tiempo a aproximadamente 1 hora.</p>
+                        <button class="error-btn">Advertencia</button>
+                    </div>
+                    <p class="mensaje-error" hidden></p>
+                    <img src="/images1/cocinarCarneMenes.png" alt="Cocinar la carne en una olla." class="imagen-paso">
+                </article>
+
+                <article class="paso" data-error="Si olvidas la sal, quedará sin sabor.">
+                    <div class="paso-header">
+                        <p>Mientras la carne se cocina, pela las habas y las papas. Corta las papas blancas en cubos
+                            medianos y déjalas remojando en un tazón con agua fría para que no se oxiden y se pongan
+                            negras.</p>
+                        <button class="error-btn">Advertencia</button>
+                    </div>
+                    <p class="mensaje-error" hidden></p>
+                    <img src="/images1/verdurasMenes.png" alt="Picar en cuadritos las verduras." class="imagen-paso">
+                </article>
+
+                <article class="paso" data-error="No apagar antes ni después.">
+                    <div class="paso-header">
+                        <p>Retira la cáscara del zapallo y córtalo en cubos del mismo tamaño que las papas</p>
+                        <button class="error-btn">Advertencia</button>
+                    </div>
+                    <p class="mensaje-error" hidden></p>
+                    <img src="/images1/pelarZapallo.png" alt="Retirar la cascara del zapallo." class="imagen-paso">
+                </article>
+
+                <article class="paso" data-error="Si cae cáscara, tendrás calcio extra.">
+                    <div class="paso-header">
+                        <p>Cuando la carne esté tan suave que se pueda cortar con un tenedor, destapa la olla e
+                            incorpora las papas en cubos, los choclos en rodajas y el fideo macarrón. Tapa la olla y
+                            deja cocinar por 15 minutos o hasta que la pasta esté al dente.</p>
+                        <button class="error-btn">Advertencia</button>
+                    </div>
+                    <p class="mensaje-error" hidden></p>
+                    <img src="/images1/agregarVegetalesMenes.png" alt="Agregar los vegetales a al olla y cocinar."
+                        class="imagen-paso">
+                </article>
+
+                <article class="paso" data-error="No te distraigas ni por un segundo si no, será arroz quemado :).">
+                    <div class="paso-header">
+                        <p>Cuando la pasta aún esté un poco cruda en el centro, agrega el zapallo picado y las habas.
+                            Nuevamente tapa la olla y deja cocinar por unos 5 minutos más.</p>
+                        <button class="error-btn">Advertencia</button>
+                    </div>
+                    <p class="mensaje-error" hidden></p>
+                    <img src="/images1/agregarMasMenes.png" alt="Agregar sapallo picado y las habas."
+                        class="imagen-paso">
+                </article>
+
+                <article class="paso" data-error="No te distraigas ni por un segundo si no, será arroz quemado :).">
+                    <div class="paso-header">
+                        <p>Aparte, prepara el aderezo. Primero, corta una cebolla en trozos medianos. Para hacerlo,
+                            retira los dos extremos de la cebolla junto con la capa más superficial, luego pártela por
+                            la mitad y procede a cortar cada parte en gajos medianos, después corta de forma transversal
+                            para obtener cubos.</p>
+                        <button class="error-btn">Advertencia</button>
+                    </div>
+                    <p class="mensaje-error" hidden></p>
+                    <img src="/images1/picarCebollaMenes.png" alt="Picar la cebolla para aderezo." class="imagen-paso">
+                </article>
+
+                <article class="paso" data-error="No te distraigas ni por un segundo si no, será arroz quemado :).">
+                    <div class="paso-header">
+                        <p>Coloca esta cebolla en una sartén con un buen chorro de aceite y agrega unos dientes de ajo.
+                            Sofríelos por un par de minutos hasta que tomen un color dorado.</p>
+                        <button class="error-btn">Advertencia</button>
+                    </div>
+                    <p class="mensaje-error" hidden></p>
+                    <img src="/images1/sofreirCebolla.png" alt="Sofreir la cebolla en un sarten hasta dorar."
+                        class="imagen-paso">
+                </article>
+
+                <article class="paso" data-error="No te distraigas ni por un segundo si no, será arroz quemado :).">
+                    <div class="paso-header">
+                        <p>Incorpora las hojas de espinaca y albahaca, removiendo con la ayuda de unas pinzas.</p>
+                        <button class="error-btn">Advertencia</button>
+                    </div>
+                    <p class="mensaje-error" hidden></p>
+                    <img src="/images1/agregarAlbahaca.png" alt="Incorporar la albahaca y espinaca."
+                        class="imagen-paso">
+                </article>
+
+                <article class="paso" data-error="No te distraigas ni por un segundo si no, será arroz quemado :).">
+                    <div class="paso-header">
+                        <p>Vierte estas hojas con cebolla y ajos en el vaso de la licuadora y, con un pequeño chorro de
+                            agua, licúa hasta que se forme una pasta o una crema verde homogénea.</p>
+                        <button class="error-btn">Advertencia</button>
+                    </div>
+                    <p class="mensaje-error" hidden></p>
+                    <img src="/images1/agregarLicuadora.png" alt="Agregar el sofrito a la licuadora."
+                        class="imagen-paso">
+                </article>
+
+                <article class="paso" data-error="No te distraigas ni por un segundo si no, será arroz quemado :).">
+                    <div class="paso-header">
+                        <p>Destapa la olla y agrega la crema de albahaca. Remueve cuidadosamente para evitar destrozar
+                            las papas y agrega sal al gusto.</p>
+                        <button class="error-btn">Advertencia</button>
+                    </div>
+                    <p class="mensaje-error" hidden></p>
+                    <img src="/images1/agregarLicuado.png" alt="Agregar el licuado a la olla del caldo."
+                        class="imagen-paso">
+                </article>
+
+                <article class="paso" data-error="No te distraigas ni por un segundo si no, será arroz quemado :).">
+                    <div class="paso-header">
+                        <p>Sirve inmediatamente en un tazón hondo y buen provecho. ¡A comer! Cuéntanos en los
+                            comentarios tu opinión.</p>
+                        <button class="error-btn">Advertencia</button>
+                    </div>
+                    <p class="mensaje-error" hidden></p>
+                    <img src="/images1/menestronListo.png" alt="Menestrón listo para servir." class="imagen-paso">
+                </article>
+            </div>
+        </section>
+        <!--consejos-->
+        <section id="consejos">
+            <h2>Consejos</h2>
+            <ul class="consejos-list">
+                <li>Agrega mantequilla para más sabor.</li>
+                <li>Decora con una hoja de cilantro.</li>
+                <li>Puedes acompañarlo con aguacate o atún.</li>
+                <li>No olvides tomar la foto para Instagram.</li>
+            </ul>
+        </section>
+        <!--video-->
+        <section id="video">
+            <h2>Video para una ayuda extra u otra forma de preparación.</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/xIu9ryeqtGE?si=6ET_JWHH_iWX5uvK"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <div class="containerFooter">
+            <div class="footerLeft">
+                <img src="/images/transparentseclogo.png" alt="Logo sabor del dia" class="footerLogo">
+                <div class="socialLinks">
+                    <a target="_blank" href="https://www.facebook.com/henrycavill"><i
+                            class="fab fa-facebook-f"></i>Facebook</a>
+                    <a target="_blank" href="https://www.youtube.com/"><i class="fab fa-youtube"></i>YouTube</a>
+                    <a target="_blank" href="https://www.instagram.com/henrycavill/"><i
+                            class="fab fa-instagram"></i>Instagram</a>
+                </div>
+            </div>
+            <div class="footerRight">
+                <img src="/images/morpheusLogo.png" alt="Logo Morpheus" class="morpheusLogo">
+                <p class="credit">Diseñado por Morpheus Enterprise</p>
+            </div>
+        </div>
+    </footer>
+    <script src="/js/receta1.js"></script>
+</body>
+
+</html>

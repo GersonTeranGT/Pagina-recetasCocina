@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carne mechada</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <!--FAVICON-->
+    <link rel="icon" href="/images/transparenticonmini.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/receta1.css">
+</head>
+
+<body>
+    <header id="header">
+        <h1 id="headerTitle"><img src="/images/transparentlogo.png" alt="Icono de la pagina" class="titleIcon">Carne
+            mechada</h1>
+        <nav id="nav">
+            <ul class="navList">
+                <li class="navItem"><a href="/index.html" id="home">Inicio</a></li>
+                <li class="navItem"><a href="/pages/recetas.html" id="recipes">Recetas</a></li>
+                <li class="navItem"><a href="/pages/nosotros.html" id="us">Nosotros</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!--Titulo principal-->
+        <h2 id="tituloR1">Cómo preparar un delicioso plato de carne mechada.</h2>
+        <p>Carne de res desmenuzada en una sabrosa salsa de cebolla, ideal para sandwiches o acompañamientos.</p>
+        <!--seccion de los ingredientes-->
+        <section id="ingredientes">
+            <h2>Ingredientes</h2>
+            <button class="toggle-btn" aria-controls="lista-ingredientes" aria-expanded="true">
+                Mostrar / Ocultar
+            </button>
+            <ul id="lista-ingredientes" class="ingredientes-list">
+                <li>1 kilogramo de tapapecho, posta rosada o choclillo</li>
+                <li>1 zanahoria</li>
+                <li>1 cebolla</li>
+                <li>3 dientes de ajo</li>
+                <li>1 cucharadita de ají color</li>
+                <li>1 cucharadita de orégano</li>
+                <li>4 hojas de laurel</li>
+                <li>Aceite</li>
+                <li>Sal</li>
+                <li>Pimienta</li>
+            </ul>
+        </section>
+        <!--Pasos-->
+        <section id="pasos">
+            <h2>Pasos</h2>
+            <button class="toggle-btn" aria-controls="lista-pasos" aria-expanded="false">
+                Mostrar / Ocultar
+            </button>
+            <div id="lista-pasos" class="pasos-list" hidden>
+                <article class="paso" data-error="No lavar el arroz puede dejarlo arenoso.">
+                    <div class="paso-header">
+                        <p>Si tu carne es muy grande, dividela en dos partes para acelerar la cocción. Si tiene grasa,
+                            retira el exceso, pero deja un poco para mantener la jugosidad. Este es el primer secreto de
+                            las recetas con carne mechada tradicionales.</p>
+                        <button class="error-btn">Advertencia</button>
+                    </div>
+                    <p class="mensaje-error" hidden></p>
+                    <img src="/images1/carneDesmechada.png" alt="Cortar la carne en partes." class="imagen-paso">
+                </article>
+
+                <article class="paso" data-error="Si olvidas la sal, quedará sin sabor.">
+                    <div class="paso-header">
+                        <p>En una olla grande, calienta el aceite a fuego medio-alto. Sella la carne por todos sus lados
+                            hasta que esté bien dorada. Este paso es fundamental cuando aprendes cómo preparar carne
+                            mechada, ya que ayuda a mantener los jugos dentro y aporta más sabor.</p>
+                        <button class="error-btn">Advertencia</button>
+                    </div>
+                    <p class="mensaje-error" hidden></p>
+                    <img src="/images1/sellarCarne.png" alt="Sellar la carne en el sartén." class="imagen-paso">
+                </article>
+
+                <article class="paso" data-error="No apagar antes ni después.">
+                    <div class="paso-header">
+                        <p>Pica finamente la cebolla y los dientes de ajo y ralla la zanahoria.</p>
+                        <button class="error-btn">Advertencia</button>
+                    </div>
+                    <p class="mensaje-error" hidden></p>
+                    <img src="/images1/picarCebollaMecha.png" alt="Picar la cebolla finamente." class="imagen-paso">
+                    <img src="/images1/picarAjoMecha.png" alt="Picar el ajo finamente." class="imagen-paso">
+                    <img src="/images1/rallarZanahoria.png" alt="Rallar al zanahoria." class="imagen-paso">
+                </article>
+
+                <article class="paso" data-error="No apagar antes ni después.">
+                    <div class="paso-header">
+                        <p>Una vez que la carne este completamente sellada retirala del sartén y reserva.</p>
+                        <button class="error-btn">Advertencia</button>
+                    </div>
+                    <p class="mensaje-error" hidden></p>
+                    <img src="/images1/carneSelladaFinal.png" alt="Retirar la carne sellada y reservar."
+                        class="imagen-paso">
+                </article>
+
+                <article class="paso" data-error="No apagar antes ni después.">
+                    <div class="paso-header">
+                        <p>En la misma olla, añade un poco más de aceite si es necesario y agrega la cebolla, el ajo
+                            picado y la zanahoria rallada. Cocina por unos minutos hasta que la cebolla esté
+                            transparente. Agrega sal, orégano y ají al sofrito. Mezcla bien para que los sabores se
+                            integren.</p>
+                        <button class="error-btn">Advertencia</button>
+                    </div>
+                    <p class="mensaje-error" hidden></p>
+                    <img src="/images1/agregarCondimentosMecha.png" alt="Juntar todos los ingredientes."
+                        class="imagen-paso">
+                </article>
+
+                <article class="paso" data-error="No apagar antes ni después.">
+                    <div class="paso-header">
+                        <p>Vuelve a poner la carne en la olla. Luego incorpora las hojas de laurel. Luego, añade agua
+                            caliente hasta cubrir al menos 3/4 de la carne.</p>
+                        <button class="error-btn">Advertencia</button>
+                    </div>
+                    <p class="mensaje-error" hidden></p>
+                    <img src="/images1/agregarCarneOllaMecha.png" alt="Regresar la carne a la olla."
+                        class="imagen-paso">
+                    <img src="/images1/agregarTodosIngredientes.png" alt="Agregar agua para cocción."
+                        class="imagen-paso">
+                </article>
+
+                <article class="paso" data-error="No apagar antes ni después.">
+                    <div class="paso-header">
+                        <p>Tapa la olla y cocina a fuego medio-bajo. El tiempo de cocción carne mechada en olla normal
+                            es de 1 hora 30 minutos a 2 horas aproximadamente, o hasta que la carne esté blanda y puedas
+                            deshilacharla fácilmente con un tenedor.</p>
+                        <button class="error-btn">Advertencia</button>
+                    </div>
+                    <p class="mensaje-error" hidden></p>
+                    <img src="/images1/taparOlla.png" alt="Tapar la olla y dejar cocinar." class="imagen-paso">
+                </article>
+
+                <article class="paso" data-error="No apagar antes ni después.">
+                    <div class="paso-header">
+                        <p>Pasado el tiempo, verifica que la carne esté blanda. Una vez lista, retira del fuego y saca
+                            la carne de la olla. Deja que se enfríe un poco y deshilacha con dos tenedores.</p>
+                        <button class="error-btn">Advertencia</button>
+                    </div>
+                    <p class="mensaje-error" hidden></p>
+                    <img src="/images1/carneCocinada.png" alt="Carne cocinada lista para desmechar."
+                        class="imagen-paso">
+                    <img src="/images1/carneDesmenusada.png" alt="Carne desmechada." class="imagen-paso">
+                </article>
+
+                <article class="paso" data-error="No apagar antes ni después.">
+                    <div class="paso-header">
+                        <p>Devuelve la carne deshilachada a la olla para que se empape con la salsa que quedó de la
+                            cocción. Despues sirve la carne mechada chilena y disfruta con los acompañamientos que más
+                            te gusten, se puede servir con arroz, puré, ensaladas o incluso en sándwich.</p>
+                        <button class="error-btn">Advertencia</button>
+                    </div>
+                    <p class="mensaje-error" hidden></p>
+                    <img src="/images1/carneCompletaMecha.png" alt="Carne lista para empleatar." class="imagen-paso">
+                    <img src="/images1/mechadaLista.png" alt="Carne mechada lista para servir." class="imagen-paso">
+                </article>
+            </div>
+        </section>
+        <!--consejos-->
+        <section id="consejos">
+            <h2>Consejos</h2>
+            <ul class="consejos-list">
+                <li>Agrega mantequilla para más sabor.</li>
+                <li>Decora con una hoja de cilantro.</li>
+                <li>Puedes acompañarlo con aguacate o atún.</li>
+                <li>No olvides tomar la foto para Instagram.</li>
+            </ul>
+        </section>
+        <!--video-->
+        <section id="video">
+            <h2>Video para una ayuda extra u otra forma de preparación.</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/SZS1_E-a00Y?si=2Db8nzV2EAeEEJMP"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <div class="containerFooter">
+            <div class="footerLeft">
+                <img src="/images/transparentseclogo.png" alt="Logo sabor del dia" class="footerLogo">
+                <div class="socialLinks">
+                    <a target="_blank" href="https://www.facebook.com/henrycavill"><i
+                            class="fab fa-facebook-f"></i>Facebook</a>
+                    <a target="_blank" href="https://www.youtube.com/"><i class="fab fa-youtube"></i>YouTube</a>
+                    <a target="_blank" href="https://www.instagram.com/henrycavill/"><i
+                            class="fab fa-instagram"></i>Instagram</a>
+                </div>
+            </div>
+            <div class="footerRight">
+                <img src="/images/morpheusLogo.png" alt="Logo Morpheus" class="morpheusLogo">
+                <p class="credit">Diseñado por Morpheus Enterprise</p>
+            </div>
+        </div>
+    </footer>
+    <script src="/js/receta1.js"></script>
+</body>
+
+</html>

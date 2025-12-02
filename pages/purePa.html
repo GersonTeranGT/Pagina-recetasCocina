@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puré de papa con pollo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <!--FAVICON-->
+    <link rel="icon" href="/images/transparenticonmini.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/receta1.css">
+</head>
+
+<body>
+    <header id="header">
+        <h1 id="headerTitle"><img src="/images/transparentlogo.png" alt="Icono de la pagina" class="titleIcon">Puré de
+            papa con pollo</h1>
+        <nav id="nav">
+            <ul class="navList">
+                <li class="navItem"><a href="/index.html" id="home">Inicio</a></li>
+                <li class="navItem"><a href="/pages/recetas.html" id="recipes">Recetas</a></li>
+                <li class="navItem"><a href="/pages/nosotros.html" id="us">Nosotros</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!--Titulo principal-->
+        <h2 id="tituloR1">Cómo preparar un delicioso puré de papa con pollo</h2>
+        <p>Crema suave de papas acompañada de pollo guisado, la combinación perfecta de texturas.</p>
+        <!--seccion de los ingredientes-->
+        <section id="ingredientes">
+            <h2>Ingredientes</h2>
+            <button class="toggle-btn" aria-controls="lista-ingredientes" aria-expanded="true">
+                Mostrar / Ocultar
+            </button>
+            <ul id="lista-ingredientes" class="ingredientes-list">
+                <li>1/2 kilo de papas</li>
+                <li>250 mililitros de leche evaporada</li>
+                <li>1 cubo de mantequilla</li>
+                <li>200 mililitros de agua</li>
+                <li>Sal al gusto</li>
+                <li>4 piernas de pollo</li>
+                <li>3 cucharadas soperas de ají en pasta</li>
+                <li>1 cucharada sopera de mostaza</li>
+                <li>1 cucharada sopera de ajo molido</li>
+                <li>1 chorro de salsa de soya</li>
+                <li>1/2 cucharadita de orégano seco molido</li>
+                <li>1 chorro de vinagre tinto</li>
+                <li>1/2 cucharadita de pimienta negra molida</li>
+                <li>1/2 cucharadita de comino molido</li>
+            </ul>
+        </section>
+        <!--Pasos-->
+        <section id="pasos">
+            <h2>Pasos</h2>
+            <button class="toggle-btn" aria-controls="lista-pasos" aria-expanded="false">
+                Mostrar / Ocultar
+            </button>
+            <div id="lista-pasos" class="pasos-list" hidden>
+                <article class="paso" data-error="No lavar el arroz puede dejarlo arenoso.">
+                    <div class="paso-header">
+                        <p>Para preparar el puré, comienza sancochando las papas en abundante agua fría. Tapa la olla
+                            y deja que hierva; luego reduce el fuego al mínimo y deja cocer durante unos 20 a 25
+                            minutos, o hasta que puedas introducir un cuchillo con facilidad. Retíralas de inmediato
+                            para evitar abran en el agua.</p>
+                        <button class="error-btn">Advertencia</button>
+                    </div>
+                    <p class="mensaje-error" hidden></p>
+                    <img src="/images1/hervirPapas.png" alt="Hervir las papas." class="imagen-paso">
+                </article>
+
+                <article class="paso" data-error="Si olvidas la sal, quedará sin sabor.">
+                    <div class="paso-header">
+                        <p>Cuando hayan enfriado un poco, pélalas rápidamente y colócalas en un tazón o directamente en
+                            la olla. Aplástalas con la prensa las papas hasta obtener un puré suave.</p>
+                        <button class="error-btn">Advertencia</button>
+                    </div>
+                    <p class="mensaje-error" hidden></p>
+                    <img src="/images1/aplastarPapas.png" alt="Aplastar las papas hasta hacer puré."
+                        class="imagen-paso">
+                </article>
+
+                <article class="paso" data-error="No apagar antes ni después.">
+                    <div class="paso-header">
+                        <p>Agrega leche, agua, un cubo de mantequilla y sal al gusto. Lleva la mezcla a fuego medio-bajo
+                            y remueve bien hasta que empiece a burbujear. Rectifica la sazón, tapa la olla y reserva
+                            hasta el momento de servir.</p>
+                        <button class="error-btn">Advertencia</button>
+                    </div>
+                    <p class="mensaje-error" hidden></p>
+                    <img src="/images1/condimentarPure.png" alt="Agreggar leche, mantequilla y sal al puré."
+                        class="imagen-paso">
+                </article>
+
+                <article class="paso" data-error="No apagar antes ni después.">
+                    <div class="paso-header">
+                        <p>Para el pollo, prepara el aderezo en un tazón aparte combinando ají panca, ajo molido,
+                            mostaza, vinagre, sillao, especias y hierbas como comino, pimienta, sal, paprika y orégano.
+                            Mezcla bien.</p>
+                        <button class="error-btn">Advertencia</button>
+                    </div>
+                    <p class="mensaje-error" hidden></p>
+                    <img src="/images1/marinadoPure.png" alt="Preparar el marinado para el pollo." class="imagen-paso">
+                </article>
+
+                <article class="paso" data-error="No apagar antes ni después.">
+                    <div class="paso-header">
+                        <p>Adoba las piezas de pollo crudo con esta preparación y lleva a refrigerar por al menos 1
+                            hora, o mejor aún, toda la noche.
+                        </p>
+                        <button class="error-btn">Advertencia</button>
+                    </div>
+                    <p class="mensaje-error" hidden></p>
+                    <img src="/images1/agregarAdoboPu.png" alt="Agregar el adobo al pollo." class="imagen-paso">
+                </article>
+
+                <article class="paso" data-error="No apagar antes ni después.">
+                    <div class="paso-header">
+                        <p>Al día siguiente, puedes cocinarlas en el horno precalentado a 175 °C durante 45 minutos, o
+                            colocar el pollo a la olla con tapa cubriendo con caldo de pollo, dejando que se cocinen
+                            durante unos 25 minutos o hasta que estén completamente cocidas por dentro.</p>
+                        <button class="error-btn">Advertencia</button>
+                    </div>
+                    <p class="mensaje-error" hidden></p>
+                    <img src="/images1/cocinarPolloPu.png" alt="Cocinar el pollo en horno o frito." class="imagen-paso">
+                </article>
+
+                <article class="paso" data-error="No apagar antes ni después.">
+                    <div class="paso-header">
+                        <p>Al momento de servir, acomoda las piezas de pollo junto al puré de papa bien caliente y
+                            acompaña con una porción de ensalada fresca. ¡Buen provecho! </p>
+                        <button class="error-btn">Advertencia</button>
+                    </div>
+                    <p class="mensaje-error" hidden></p>
+                    <img src="/images1/pureListo.png" alt="Pure con polli lsirto para servir." class="imagen-paso">
+                </article>
+            </div>
+        </section>
+        <!--consejos-->
+        <section id="consejos">
+            <h2>Consejos</h2>
+            <ul class="consejos-list">
+                <li>Puedes utlizar cualquier carne para acompañar el puré.</li>
+                <li>Decora con una hoja de cilantro.</li>
+                <li>Puedes acompañarlo con aguacate o atún.</li>
+                <li>No olvides tomar la foto para Instagram.</li>
+            </ul>
+        </section>
+        <!--video-->
+        <section id="video">
+            <h2>Video para una ayuda extra u otra forma de preparación.</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/JnyDLT19Tzo?si=09xyI82e3UPV0oCV"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <div class="containerFooter">
+            <div class="footerLeft">
+                <img src="/images/transparentseclogo.png" alt="Logo sabor del dia" class="footerLogo">
+                <div class="socialLinks">
+                    <a target="_blank" href="https://www.facebook.com/henrycavill"><i
+                            class="fab fa-facebook-f"></i>Facebook</a>
+                    <a target="_blank" href="https://www.youtube.com/"><i class="fab fa-youtube"></i>YouTube</a>
+                    <a target="_blank" href="https://www.instagram.com/henrycavill/"><i
+                            class="fab fa-instagram"></i>Instagram</a>
+                </div>
+            </div>
+            <div class="footerRight">
+                <img src="/images/morpheusLogo.png" alt="Logo Morpheus" class="morpheusLogo">
+                <p class="credit">Diseñado por Morpheus Enterprise</p>
+            </div>
+        </div>
+    </footer>
+    <script src="/js/receta1.js"></script>
+</body>
+
+</html>

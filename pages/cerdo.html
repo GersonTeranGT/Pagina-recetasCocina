@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pechito de cerdo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <!--FAVICON-->
+    <link rel="icon" href="/images/transparenticonmini.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/receta1.css">
+</head>
+
+<body>
+    <header id="header">
+        <h1 id="headerTitle"><img src="/images/transparentlogo.png" alt="Icono de la pagina" class="titleIcon">Pechito de
+            cerdo al horno</h1>
+        <nav id="nav">
+            <ul class="navList">
+                <li class="navItem"><a href="/index.html" id="home">Inicio</a></li>
+                <li class="navItem"><a href="/pages/recetas.html" id="recipes">Recetas</a></li>
+                <li class="navItem"><a href="/pages/nosotros.html" id="us">Nosotros</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!--Titulo principal-->
+        <h2 id="tituloR1">Cómo preparar un tierno pechito de cerdo al horno o sartén.</h2>
+        <p>Jugoso y tierno, horneado lentamente con hierbas aromáticas para un sabor intenso. Tambien lo puedes preparar en sartén.</p>
+        <!--seccion de los ingredientes-->
+        <section id="ingredientes">
+            <h2>Ingredientes</h2>
+            <button class="toggle-btn" aria-controls="lista-ingredientes" aria-expanded="true">
+                Mostrar / Ocultar
+            </button>
+            <ul id="lista-ingredientes" class="ingredientes-list">
+                <li>1 tira de pechito de cerdo</li>
+                <li>2 cucharaditas de paprika</li>
+                <li>1 cucharadita de ají molido</li>
+                <li>1 cucharadita de ajo en polvo</li>
+                <li>3 cucharaditas de sal</li>
+                <li>1/2 cucharadita de pimienta negra molida</li>
+                <li>1 taza de cerveza rubia</li>
+                <li>4 papas</li>
+                <li>2 cebollas</li>
+                <li>2 zanahorias</li>
+            </ul>
+        </section>
+        <!--Pasos-->
+        <section id="pasos">
+            <h2>Pasos</h2>
+            <button class="toggle-btn" aria-controls="lista-pasos" aria-expanded="false">
+                Mostrar / Ocultar
+            </button>
+            <div id="lista-pasos" class="pasos-list" hidden>
+                <article class="paso" data-error="No lavar el arroz puede dejarlo arenoso.">
+                    <div class="paso-header">
+                        <p>Comienza cortando la tira de pechito en dos partes para que entre cómodamente en la placa
+                            del horno. Es importante hacerlo entre las costillas, sin atravesar el hueso, para no dañar
+                            el filo del cuchillo.</p>
+                        <button class="error-btn">Advertencia</button>
+                    </div>
+                    <p class="mensaje-error" hidden></p>
+                    <img src="/images1/cortarCerdo.png" alt="Cortar la carne en partes." class="imagen-paso">
+                </article>
+
+                <article class="paso" data-error="Si olvidas la sal, quedará sin sabor.">
+                    <div class="paso-header">
+                        <p>¿Te preguntas cómo condimentar un pechito de cerdo al horno? Pues bien, en un bowl pequeño
+                            mezcla las especias: paprika, ají molido, pimienta negra, ajo en polvo y sal. Remueve bien
+                            hasta que se integren.</p>
+                        <button class="error-btn">Advertencia</button>
+                    </div>
+                    <p class="mensaje-error" hidden></p>
+                    <img src="/images1/sazonarCerdo.png" alt="Mezclar las especias." class="imagen-paso">
+                </article>
+
+                <article class="paso" data-error="No apagar antes ni después.">
+                    <div class="paso-header">
+                        <p>Unta esta mezcla sobre las piezas de cerdo y embadurna con las manos para que se impregne de
+                            forma pareja. Reserva al menos 30 minutos, aunque lo ideal es dejarlo marinar de un día para
+                            el otro para que absorba mejor los sabores.</p>
+                        <button class="error-btn">Advertencia</button>
+                    </div>
+                    <p class="mensaje-error" hidden></p>
+                    <img src="/images1/untarCerdo.png" alt="Untar la mezcla sobre la carne." class="imagen-paso">
+                </article>
+
+                <article class="paso" data-error="No apagar antes ni después.">
+                    <div class="paso-header">
+                        <p>Lleva las piezas a una sartén caliente o directamente al horno precalentado a 200 °C. Dora
+                            por ambos lados, girando cada vez que notes que uno ya está bien caramelizado. Este paso
+                            ayuda a mantener la carne jugosa y con buena textura.</p>
+                        <button class="error-btn">Advertencia</button>
+                    </div>
+                    <p class="mensaje-error" hidden></p>
+                    <img src="/images1/cerdoSarten.png" alt="Llevar el corte al sartén o al horno." class="imagen-paso">
+                </article>
+
+                <article class="paso" data-error="No apagar antes ni después.">
+                    <div class="paso-header">
+                        <p>Una vez dorado el pechito de cerdo, coloca el cerdo en una placa profunda y añade un buen
+                            chorro de cerveza. Acompaña con gajos de papa, cebolla en trozos y, si quieres, zanahorias
+                            cortadas en rodajas gruesas. Aromatiza con una rama de romero fresco.</p>
+                        <button class="error-btn">Advertencia</button>
+                    </div>
+                    <p class="mensaje-error" hidden></p>
+                    <img src="/images1/cerdoPapas.png" alt="Agregar las papas, cerveza y zanahorias."
+                        class="imagen-paso">
+                </article>
+
+                <article class="paso" data-error="No apagar antes ni después.">
+                    <div class="paso-header">
+                        <p>Lleva el pechito de cerdo al horno tierno a 175°C durante unos 45 minutos como tiempo de
+                            cocción. Al retirarlo del horno, deja reposar la carne unos 5 minutos para que los jugos se
+                            redistribuyan. Sirve inmediatamente, acompañado de la guarnición de papas y cebolla asadas.
+                            ¡Buen provecho!</p>
+                        <button class="error-btn">Advertencia</button>
+                    </div>
+                    <p class="mensaje-error" hidden></p>
+                    <img src="/images1/cerdoListo.png" alt="Pechito listo para servir." class="imagen-paso">
+                </article>
+            </div>
+        </section>
+        <!--consejos-->
+        <section id="consejos">
+            <h2>Consejos</h2>
+            <ul class="consejos-list">
+                <li>Agrega mantequilla para más sabor.</li>
+                <li>Decora con una hoja de cilantro.</li>
+                <li>Puedes acompañarlo con aguacate o atún.</li>
+                <li>No olvides tomar la foto para Instagram.</li>
+            </ul>
+        </section>
+        <!--video-->
+        <section id="video">
+            <h2>Video para una ayuda extra u otra forma de preparación.</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/BBN9Q7ctntI?si=5UmdbKWwM3rMxxWE"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <div class="containerFooter">
+            <div class="footerLeft">
+                <img src="/images/transparentseclogo.png" alt="Logo sabor del dia" class="footerLogo">
+                <div class="socialLinks">
+                    <a target="_blank" href="https://www.facebook.com/henrycavill"><i
+                            class="fab fa-facebook-f"></i>Facebook</a>
+                    <a target="_blank" href="https://www.youtube.com/"><i class="fab fa-youtube"></i>YouTube</a>
+                    <a target="_blank" href="https://www.instagram.com/henrycavill/"><i
+                            class="fab fa-instagram"></i>Instagram</a>
+                </div>
+            </div>
+            <div class="footerRight">
+                <img src="/images/morpheusLogo.png" alt="Logo Morpheus" class="morpheusLogo">
+                <p class="credit">Diseñado por Morpheus Enterprise</p>
+            </div>
+        </div>
+    </footer>
+    <script src="/js/receta1.js"></script>
+</body>
+
+</html>
