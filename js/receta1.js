@@ -159,7 +159,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Función para agregar un nuevo comentario a la lista
-    function agregarComentario(nombre, email, comentario, valoracion) {
+    function agregarComentario(nombre, comentario, valoracion) {
         // Crear el elemento del comentario
         const nuevoComentario = document.createElement('div');
         nuevoComentario.className = 'comentario-item';
@@ -254,11 +254,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
             // Obtener los valores del formulario
             const nombre = document.getElementById('nombre');
-            const email = document.getElementById('email');
             const comentario = document.getElementById('comentario');
-
             const nombreValor = nombre.value.trim();
-            const emailValor = email.value.trim();
             const comentarioValor = comentario.value.trim();
 
             // Validar campos requeridos
@@ -269,32 +266,13 @@ document.addEventListener('DOMContentLoaded', function () {
                 tieneError = true;
             }
 
-            if (!emailValor) {
-                mostrarErrorCampo(email, 'Por favor, ingresa tu correo electrónico.');
-                tieneError = true;
-            }
-
             if (!comentarioValor) {
                 mostrarErrorCampo(comentario, 'Por favor, escribe tu comentario.');
                 tieneError = true;
             }
 
-            // Validar formato de email básico
-            if (emailValor && !tieneError) {
-                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                if (!emailRegex.test(emailValor)) {
-                    mostrarErrorCampo(email, 'Por favor, ingresa un correo electrónico válido.');
-                    tieneError = true;
-                }
-            }
-
-            if (tieneError) {
-                isSubmitting = false;
-                return;
-            }
-
             // Agregar el nuevo comentario
-            agregarComentario(nombreValor, emailValor, comentarioValor, currentRating);
+            agregarComentario(nombreValor, comentarioValor, currentRating);
 
             // Mostrar mensaje de éxito UNA VEZ
             showNotification('¡Comentario enviado con éxito!');
