@@ -50,7 +50,7 @@
                 <h1 class="title-h1">Recetas de Temporada</h1>
                 <div class="cards-container">
                     <!-- Tarjeta 1 -->
-                    <div class="recipe-card">
+                    <div class="recipe-card" data-ingredientes="pollo" data-tiempos="faciles,cenas">
                         <img src="https://www.shutterstock.com/image-photo/grilled-chicken-breast-cooked-vegetables-600nw-2618443825.jpg"
                             alt="Pollo a la plancha">
                         <div class="recipe-card-content">
@@ -67,7 +67,7 @@
                     </div>
 
                     <!-- Tarjeta 2 -->
-                    <div class="recipe-card">
+                    <div class="recipe-card" data-tiempos="faciles">
                         <img src="https://media.istockphoto.com/id/1472680285/es/foto/comida-saludable-con-pollo-a-la-parrilla-arroz-ensalada-y-verduras-servida-por-una-mujer.jpg?s=612x612&w=0&k=20&c=RafCzs-2byU6HSC2hbEkT07ZsZ5Q7j_XfAxCsXT6_f0="
                             alt="Ensalada rusa con vainitas">
                         <div class="recipe-card-content">
@@ -84,7 +84,7 @@
                     </div>
 
                     <!-- Tarjeta 3 -->
-                    <div class="recipe-card">
+                    <div class="recipe-card" data-ingredientes="carne_res" data-tiempos="cenas">
                         <img src="https://c.files.bbci.co.uk/DBBF/production/_105055265_bandejapaisa.jpg"
                             alt="Costilla de cerdo al jugo">
                         <div class="recipe-card-content">
@@ -113,9 +113,53 @@
                     <input type="text" id="recipeSearch" placeholder="Buscar recetas por nombre...">
                     <button id="searchButton">🔍</button>
                 </div>
+                <!-- SISTEMA DE FILTROS -->
+                <div class="filters-container">
+                    <div class="filter-group">
+                        <h4 class="filter-title">Ingredientes</h4>
+                        <div class="filter-options">
+                            <label class="filter-option">
+                                <input type="radio" name="filter" value="arroz" class="filter-radio">
+                                <span class="filter-label">Arroz</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="radio" name="filter" value="carne_res" class="filter-radio">
+                                <span class="filter-label">Carne de res</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="radio" name="filter" value="pollo" class="filter-radio">
+                                <span class="filter-label">Pollo</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="radio" name="filter" value="pescado" class="filter-radio">
+                                <span class="filter-label">Pescado</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4 class="filter-title">Por tiempos</h4>
+                        <div class="filter-options">
+                            <label class="filter-option">
+                                <input type="radio" name="filter" value="faciles" class="filter-radio">
+                                <span class="filter-label">Recetas fáciles</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="radio" name="filter" value="sopas" class="filter-radio">
+                                <span class="filter-label">Recetas de sopas</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="radio" name="filter" value="cenas" class="filter-radio">
+                                <span class="filter-label">Recetas para cenas</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <button id="clearFilters" class="clear-btn">Limpiar filtros</button>
+                </div>
                 <div class="cards-container">
                     <!-- Fila 1 - Tarjeta 1 -->
-                    <div class="recipe-card">
+                    <div class="recipe-card" data-ingredientes="carne_res" data-tiempos="sopas">
                         <img src="/images/sancocho_res.png" alt="Sancocho de res">
                         <div class="recipe-card-content">
                             <h3>Sancocho de res</h3>
@@ -132,7 +176,7 @@
                     </div>
 
                     <!-- Fila 1 - Tarjeta 2 -->
-                    <div class="recipe-card">
+                    <div class="recipe-card" data-ingredientes="carne_res" data-tiempos="sopas">
                         <img src="/images/sopa_de_menestron.png" alt="Sopa de menestron">
                         <div class="recipe-card-content">
                             <h3>Sopa de menestron</h3>
@@ -148,7 +192,7 @@
                     </div>
 
                     <!-- Fila 1 - Tarjeta 3 -->
-                    <div class="recipe-card">
+                    <div class="recipe-card" data-tiempos="sopas,faciles">
                         <img src="/images/consome_de_verduras.png" alt="Consome de verduras">
                         <div class="recipe-card-content">
                             <h3>Consome de verduras</h3>
@@ -165,7 +209,7 @@
                     </div>
 
                     <!-- Fila 2 - Tarjeta 1 -->
-                    <div class="recipe-card">
+                    <div class="recipe-card" data-ingredientes="pescado" data-tiempos="faciles,cenas">
                         <img src="/images/tallarines_rojos_con_atun.png" alt="Tallarines rojos con atun">
                         <div class="recipe-card-content">
                             <h3>Tallarines rojos con atun</h3>
@@ -182,7 +226,7 @@
                     </div>
 
                     <!-- Fila 2 - Tarjeta 2 -->
-                    <div class="recipe-card">
+                    <div class="recipe-card" data-ingredientes="carne_res" data-tiempos="cenas">
                         <img src="/images/tacos_de_alambre.png" alt="Tacos de alambre">
                         <div class="recipe-card-content">
                             <h3>Tacos de alambre</h3>
@@ -198,7 +242,7 @@
                     </div>
 
                     <!-- Fila 2 - Tarjeta 3 -->
-                    <div class="recipe-card">
+                    <div class="recipe-card" data-ingredientes="carne_res" data-tiempos="cenas">
                         <img src="/images/pechito_de_cerdo_al_horno.png" alt="Pechito de cerdo al horno">
                         <div class="recipe-card-content">
                             <h3>Pechito de cerdo al horno</h3>
@@ -214,7 +258,7 @@
                     </div>
 
                     <!-- Fila 3 - Tarjeta 1 -->
-                    <div class="recipe-card">
+                    <div class="recipe-card" data-ingredientes="carne_res" data-tiempos="cenas">
                         <img src="/images/carne_mechada_chilena.png" alt="Carne mechada chilena">
                         <div class="recipe-card-content">
                             <h3>Carne mechada chilena</h3>
@@ -231,7 +275,7 @@
                     </div>
 
                     <!-- Fila 3 - Tarjeta 2 -->
-                    <div class="recipe-card">
+                    <div class="recipe-card" data-ingredientes="pollo,arroz" data-tiempos="faciles,cenas">
                         <img src="/images/pollada_con_arroz.png" alt="Pollo con arroz">
                         <div class="recipe-card-content">
                             <h3>Pollo con arroz</h3>
@@ -248,7 +292,7 @@
                     </div>
 
                     <!-- Fila 3 - Tarjeta 3 -->
-                    <div class="recipe-card">
+                    <div class="recipe-card" data-ingredientes="pollo" data-tiempos="faciles,cenas">
                         <img src="/images/pure_de_papa_con_pollo.png" alt="Pure de papa con pollo">
                         <div class="recipe-card-content">
                             <h3>Pure de papa con pollo</h3>
@@ -263,6 +307,91 @@
                             </p>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="comentarios">
+        <div class="comentarios-container">
+            <h2 class="title-h1">Comentarios y Valoraciones</h2>
+            <h4 class="title-h4">Comparte tu experiencia con nuestras recetas</h4>
+
+            <!-- Formulario de comentario -->
+            <div class="comentario-form">
+                <h3>Escribe tu comentario</h3>
+
+                <!-- Sistema de valoración con estrellas -->
+                <div class="rating-system">
+                    <p class="rating-label">Tu valoración:</p>
+                    <div class="stars-container">
+                        <div class="stars" id="ratingStars">
+                            <span class="star" data-value="1">★</span>
+                            <span class="star" data-value="2">★</span>
+                            <span class="star" data-value="3">★</span>
+                            <span class="star" data-value="4">★</span>
+                            <span class="star" data-value="5">★</span>
+                        </div>
+                        <div class="rating-text" id="ratingText">Selecciona una valoración</div>
+                    </div>
+                </div>
+
+                <!-- Formulario -->
+                <form class="comment-form">
+                    <div class="form-group">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Correo electrónico (no se publicará)</label>
+                        <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="comentario">Comentario o pregunta</label>
+                        <textarea id="comentario" name="comentario" rows="5"
+                            placeholder="Comparte tus pensamientos sobre esta receta..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Enviar Comentario</button>
+                </form>
+            </div>
+
+            <!-- Comentarios existentes (ejemplos) -->
+            <div class="comentarios-list">
+                <h3>Comentarios Recientes</h3>
+
+                <div class="comentario-item">
+                    <div class="comentario-header">
+                        <span class="comentario-autor">María González</span>
+                        <div class="comentario-rating">
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                        </div>
+                    </div>
+                    <p class="comentario-text">¡Excelente receta! Mi familia la amó. Los pasos fueron muy claros y el
+                        resultado espectacular.</p>
+                    <span class="comentario-fecha">Hace 2 días</span>
+                </div>
+
+                <div class="comentario-item">
+                    <div class="comentario-header">
+                        <span class="comentario-autor">Carlos Rodríguez</span>
+                        <div class="comentario-rating">
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star">★</span>
+                        </div>
+                    </div>
+                    <p class="comentario-text">Muy buena, aunque me pareció un poco salada. La próxima vez reduciré la
+                        sal.</p>
+                    <span class="comentario-fecha">Hace 1 semana</span>
                 </div>
             </div>
         </div>
