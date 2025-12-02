@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/receta1.css">
+    <link rel="stylesheet" href="/css/formulario.css">
+
 </head>
 
 <body>
@@ -101,6 +103,85 @@
                 title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
+        <section id="comentarios">
+            <div class="comentarios-container">
+                <h2 class="title-h1">Comentarios y Valoraciones</h2>
+                <h4 class="title-h4">Comparte tu experiencia con nuestras recetas</h4>
+
+                <!-- Formulario de comentario -->
+                <div class="comentario-form">
+                    <h3>Escribe tu comentario</h3>
+
+                    <!-- Sistema de valoración con estrellas -->
+                    <div class="rating-system">
+                        <p class="rating-label">Tu valoración:</p>
+                        <div class="stars-container">
+                            <div class="stars" id="ratingStars">
+                                <span class="star" data-value="1">★</span>
+                                <span class="star" data-value="2">★</span>
+                                <span class="star" data-value="3">★</span>
+                                <span class="star" data-value="4">★</span>
+                                <span class="star" data-value="5">★</span>
+                            </div>
+                            <div class="rating-text" id="ratingText">Selecciona una valoración</div>
+                        </div>
+                    </div>
+
+                    <!-- Formulario -->
+                    <form class="comment-form">
+                        <div class="form-group">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="comentario">Comentario o pregunta</label>
+                            <textarea id="comentario" name="comentario" rows="5"
+                                placeholder="Comparte tus pensamientos sobre esta receta..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn">Enviar Comentario</button>
+                    </form>
+                </div>
+
+                <!-- Comentarios existentes (ejemplos) -->
+                <div class="comentarios-list">
+                    <h3>Comentarios Recientes</h3>
+
+                    <div class="comentario-item">
+                        <div class="comentario-header">
+                            <span class="comentario-autor">Miguel Ángel</span>
+                            <div class="comentario-rating">
+                                <span class="star filled">★</span>
+                                <span class="star filled">★</span>
+                                <span class="star filled">★</span>
+                                <span class="star filled">★</span>
+                                <span class="star filled">★</span>
+                            </div>
+                        </div>
+                        <p class="comentario-text">Justo lo que necesitaba después de unos días de excesos. Liviano,
+                            nutritivo y muy fácil de preparar.</p>
+                        <span class="comentario-fecha">Hace 1 día</span>
+                    </div>
+
+                    <div class="comentario-item">
+                        <div class="comentario-header">
+                            <span class="comentario-autor">Laura Torres</span>
+                            <div class="comentario-rating">
+                                <span class="star filled">★</span>
+                                <span class="star filled">★</span>
+                                <span class="star filled">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                            </div>
+                        </div>
+                        <p class="comentario-text">Estaba bien pero le faltó un poco más de sabor. La próxima vez usaré
+                            caldo de pollo en lugar de agua.</p>
+                        <span class="comentario-fecha">Hace 1 semana</span>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
