@@ -10,15 +10,16 @@ body {
     display: grid;
     grid-template-rows: auto 1fr auto;
     min-height: 100vh;
+    margin: 0;
+    padding: 0;
 }
 
-/* HEADER GRID */
+/* HEADER GRID - CORREGIDO */
 #header {
     display: grid;
     grid-template-columns: auto 1fr auto;
     align-items: center;
-    padding: 20px;
-    gap: 20px;
+    padding: 15px 20px;
     background: #0d6b70;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
@@ -29,30 +30,42 @@ body {
     align-items: center;
     gap: 10px;
     font-size: 1.5rem;
+    color: white;
 }
 
 #nav {
     justify-self: end;
-    /* Esto empuja la nav a la derecha */
 }
 
 .navList {
     display: grid;
-    grid-template-columns: repeat(3, auto);
-    gap: 20px;
+    grid-template-columns: repeat(2, auto);
+    gap: 15px;
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-/* SECCIONES PRINCIPALES CON GRID */
+.navItem a {
+    text-decoration: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.navItem a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* SECCIONES PRINCIPALES */
 #start,
 #outstanding,
 #recetas {
     display: grid;
     grid-template-columns: 1fr;
     justify-items: center;
-    padding: 60px 20px;
+    padding: 40px 20px;
 }
 
 .start-content {
@@ -66,21 +79,146 @@ body {
 .text-content {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 15px;
+    gap: 20px;
     align-items: center;
+    width: 100%;
 }
 
-/* CONTENEDOR GRID PARA TARJETAS */
+/* BARRA DE BÚSQUEDA - OCUPA TODO EL ANCHO DEL text-content */
+.search-container {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    width: 100%;
+    margin: 20px 0;
+}
+
+#recipeSearch {
+    padding: 10px 15px;
+    border: 2px solid #ddd;
+    border-radius: 25px 0 0 25px;
+    font-size: 1rem;
+    width: 100%;
+}
+
+#searchButton {
+    padding: 10px 20px;
+    background: #ff6b6b;
+    color: white;
+    border: 2px solid #ff6b6b;
+    border-radius: 0 25px 25px 0;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+/* FILTROS - 2 COLUMNAS, 2 FILAS */
+.filters-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 20px;
+    width: 100%;
+    margin: 30px 0;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.filter-group {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 10px;
+}
+
+.filter-group:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.filter-group:nth-child(2) {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.filter-title {
+    font-size: 1.1rem;
+    color: #2c3e50;
+    font-weight: 600;
+    margin: 0;
+}
+
+.filter-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.filter-option {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 8px 12px;
+    background: white;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.filter-radio {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.filter-label {
+    font-size: 0.9rem;
+    color: #333;
+    cursor: pointer;
+}
+
+/* Botón Limpiar filtros - OCUPA AMBAS COLUMNAS EN LA SEGUNDA FILA */
+.clear-btn {
+    grid-column: 1 / span 2;
+    grid-row: 2;
+    padding: 12px 20px;
+    background: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    justify-self: center;
+    min-width: 150px;
+    margin-top: 10px;
+}
+
+/* CONTENEDOR GRID PARA TARJETAS - RESPONSIVO */
 .cards-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
     margin-top: 40px;
     width: 100%;
-    /* Asegurar que el grid mantenga su estructura */
-    grid-auto-rows: minmax(400px, auto);
+    justify-items: center;
+    /* CENTRA LAS TARJETAS */
 }
 
+/* TARJETAS DE TEMPORADA - ALTURA UNIFORME */
+.cards-container.temporada .temporada-card {
+    height: 250px;
+    /* ALTURA FIJA PARA TODAS */
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.cards-container.temporada .temporada-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* TARJETAS NORMALES DE RECETAS */
 .recipe-card {
     display: grid;
     grid-template-rows: 180px auto;
@@ -89,26 +227,22 @@ body {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     background-color: white;
-    /*Asegurar que la tarjeta mantenga sus dimensiones*/
-    height: fit-content;
+    width: 100%;
+    max-width: 320px;
+    /* ANCHO MÁXIMO */
     min-height: 400px;
 }
 
 .recipe-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    background-color: #f9f9f9;
 }
 
 .recipe-card img {
     width: 100%;
     height: 180px;
-    /* ALTURA FIJA */
     object-fit: cover;
     display: block;
-    /* Prevenir que la imagen se expanda */
-    max-height: 180px;
-    min-height: 180px;
 }
 
 .recipe-card-content {
@@ -116,17 +250,6 @@ body {
     grid-template-rows: auto auto 1fr;
     gap: 10px;
     padding: 20px;
-    min-height: 160px;
-    /* Asegurar que el contenido no afecte la imagen */
-    height: auto;
-}
-
-.recipe-card[style*="display: none"] {
-    display: none !important;
-}
-
-.recipe-card:not([style*="display: none"]) {
-    display: grid !important;
 }
 
 .recipe-card h3 {
@@ -136,17 +259,16 @@ body {
     margin: 0;
 }
 
-.cardLink{
+.cardLink {
     text-decoration: none;
     color: inherit;
     display: block;
+    height: 100%;
 }
 
 .rating {
-    display: grid;
-    grid-template-columns: repeat(5, auto);
+    display: flex;
     gap: 2px;
-    justify-content: start;
 }
 
 .rating i {
@@ -159,44 +281,6 @@ body {
     line-height: 1.5;
     font-size: 0.95rem;
     margin: 0;
-    align-self: end;
-}
-
-/* BARRA DE BÚSQUEDA CON GRID */
-.search-container {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    max-width: 500px;
-    width: 100%;
-    margin: 30px 0;
-}
-
-#recipeSearch {
-    padding: 12px 20px;
-    border: 2px solid #ddd;
-    border-radius: 25px 0 0 25px;
-    font-size: 1rem;
-    outline: none;
-    transition: border-color 0.3s ease;
-}
-
-#recipeSearch:focus {
-    border-color: #ff6b6b;
-}
-
-#searchButton {
-    padding: 12px 20px;
-    background: #ff6b6b;
-    color: white;
-    border: 2px solid #ff6b6b;
-    border-radius: 0 25px 25px 0;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background 0.3s ease;
-}
-
-#searchButton:hover {
-    background: #ff5252;
 }
 
 /* ESTILOS EXISTENTES MANTENIDOS */
@@ -212,7 +296,7 @@ body {
     font-size: 1.6rem;
     color: #7f8c8d;
     font-weight: 400;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     text-align: left;
 }
 
@@ -228,11 +312,6 @@ body {
     width: 100%;
     height: auto;
     display: block;
-    transition: transform 0.3s ease;
-}
-
-.image-container img:hover {
-    transform: scale(1.02);
 }
 
 .description {
@@ -243,157 +322,68 @@ body {
     text-align: center;
 }
 
-
-
-/* RESPONSIVE DESIGN CON GRID */
-@media (max-width: 1024px) {
-    .cards-container {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 25px;
-    }
-
-    .title-h1 {
-        font-size: 2.2rem;
-    }
-
-    .title-h4 {
-        font-size: 1.4rem;
-    }
-
-    /* HEADER TABLET */
-    #header {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto;
-        justify-items: center;
-        gap: 15px;
-    }
-
-    .navList {
-        grid-template-columns: repeat(3, auto);
-        gap: 15px;
-    }
+/*FOOTER*/
+#footer {
+    background-color: white;
+    color: black;
+    padding: 30px 30px;
 }
 
-@media (max-width: 768px) {
-
-    /* MOBILE GRID */
-    .cards-container {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    #start,
-    #outstanding,
-    #recetas {
-        padding: 40px 15px;
-    }
-
-    .start-content {
-        gap: 20px;
-    }
-
-    .title-h1 {
-        font-size: 1.8rem;
-        text-align: center;
-    }
-
-    .title-h4 {
-        font-size: 1.2rem;
-        text-align: center;
-    }
-
-    .recipe-card {
-        grid-template-rows: 160px auto;
-    }
-
-    .recipe-card-content {
-        padding: 15px;
-        min-height: 140px;
-    }
-
-    .recipe-card h3 {
-        font-size: 1.2rem;
-    }
-
-    .recipe-card p {
-        font-size: 0.9rem;
-    }
-
-    /* HEADER MOBILE */
-    #header {
-        grid-template-rows: auto auto;
-        padding: 15px;
-    }
-
-    .navList {
-        grid-template-columns: 1fr;
-        gap: 10px;
-        text-align: center;
-    }
-
-    /* SEARCH MOBILE */
-    .search-container {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto;
-        gap: 10px;
-        max-width: 100%;
-    }
-
-    #recipeSearch {
-        border-radius: 25px;
-        text-align: center;
-    }
-
-    #searchButton {
-        border-radius: 25px;
-        width: 100%;
-    }
-
-    /* FOOTER MOBILE */
-    .containerFooter {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto;
-        gap: 20px;
-        text-align: center;
-    }
-
-    .footerLeft {
-        grid-template-columns: 1fr;
-        gap: 15px;
-        justify-items: center;
-    }
-
-    .socialLinks {
-        grid-template-columns: 1fr;
-        gap: 10px;
-    }
-
-    .footerRight {
-        grid-template-columns: 1fr;
-        gap: 10px;
-        justify-items: center;
-    }
+.containerFooter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
 }
 
-@media (max-width: 480px) {
-    .title-h1 {
-        font-size: 1.6rem;
-    }
+.footerLeft {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1 1 250px;
+}
 
-    .title-h4 {
-        font-size: 1.1rem;
-    }
+.footerLogo {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
 
-    .recipe-card {
-        grid-template-rows: 140px auto;
-    }
+.socialLinks a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin: 5px 10px;
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
 
-    .rating i {
-        font-size: 0.9rem;
-    }
+.socialLinks a:hover {
+    color: #ff914d;
+}
 
-    .description {
-        font-size: 1rem;
-        text-align: left;
-    }
+.socialLinks i {
+    font-size: 1.1rem;
+}
+
+.footerRight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1 1 250px;
+}
+
+.morpheusLogo {
+    width: 160px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.credit {
+    font-size: 0.9rem;
+    color: black;
+    margin: 0;
 }
