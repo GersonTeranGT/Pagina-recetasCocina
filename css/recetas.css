@@ -1,3 +1,4 @@
+/* RESET Y BASE - CORREGIDO PARA RESPONSIVIDAD TOTAL */
 * {
     margin: 0;
     padding: 0;
@@ -5,221 +6,122 @@
     font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* CONTENEDOR PRINCIPAL GRID */
+/* HTML - BASE SÓLIDA */
+html {
+    width: 100%;
+    overflow-x: hidden;
+    font-size: clamp(14px, 1vw, 16px);
+    /* Base responsiva */
+}
+
+/* BODY - CONTENEDOR PRINCIPAL */
 body {
     display: grid;
     grid-template-rows: auto 1fr auto;
     min-height: 100vh;
+    min-height: 100dvh;
+    width: 100vw;
+    max-width: 100vw;
+    overflow-x: hidden;
+    font-size: clamp(0.875rem, 2vw, 1rem);
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
 }
 
-/* HEADER GRID */
+/* HEADER - COMPLETAMENTE RESPONSIVO */
 #header {
     display: grid;
     grid-template-columns: auto 1fr auto;
     align-items: center;
-    padding: 20px;
-    gap: 20px;
+    padding: clamp(0.5rem, 2vw, 1rem);
+    gap: clamp(0.25rem, 1.5vw, 0.75rem);
     background: #0d6b70;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
 }
 
 #headerTitle {
-    display: grid;
-    grid-template-columns: auto 1fr;
+    display: flex;
     align-items: center;
-    gap: 10px;
-    font-size: 1.5rem;
+    gap: clamp(0.25rem, 1vw, 0.5rem);
+    font-size: clamp(0.9rem, 3.5vw, 1.5rem);
+    white-space: nowrap;
 }
 
 #nav {
     justify-self: end;
-    /* Esto empuja la nav a la derecha */
 }
 
 .navList {
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp(0.25rem, 1.5vw, 0.75rem);
     list-style: none;
     margin: 0;
     padding: 0;
+    justify-content: flex-end;
 }
 
-/* SECCIONES PRINCIPALES CON GRID */
+.navItem a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    padding: clamp(0.25rem, 1vw, 0.375rem) clamp(0.375rem, 1.5vw, 0.75rem);
+    border-radius: 0.25rem;
+    transition: background-color 0.3s ease;
+    font-size: clamp(0.7rem, 2.5vw, 0.85rem);
+    white-space: nowrap;
+    display: inline-block;
+}
+
+.navItem a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* SECCIONES PRINCIPALES - CORREGIDAS */
 #start,
 #outstanding,
 #recetas {
     display: grid;
-    grid-template-columns: 1fr;
-    justify-items: center;
-    padding: 60px 20px;
+    grid-template-columns: minmax(clamp(0.5rem, 2vw, 1rem), 1fr) minmax(0, min(100%, 1200px)) minmax(clamp(0.5rem, 2vw, 1rem), 1fr);
+    padding: clamp(1rem, 5vw, 2.5rem) 0;
+    width: 100%;
+    overflow: hidden;
 }
 
+#start>*,
+#outstanding>*,
+#recetas>* {
+    grid-column: 2;
+    width: 100%;
+    padding: 0 clamp(0.5rem, 3vw, 1.5rem);
+    box-sizing: border-box;
+}
+
+/* CONTENEDOR DE INICIO */
 .start-content {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 30px;
-    max-width: 1200px;
+    gap: clamp(0.75rem, 3vw, 1.5rem);
     width: 100%;
+    justify-items: center;
 }
 
 .text-content {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 15px;
-    align-items: center;
-}
-
-/* CONTENEDOR GRID PARA TARJETAS */
-.cards-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    margin-top: 40px;
+    gap: clamp(0.375rem, 1.5vw, 0.75rem);
+    text-align: center;
     width: 100%;
-    /* Asegurar que el grid mantenga su estructura */
-    grid-auto-rows: minmax(400px, auto);
 }
 
-.recipe-card {
-    display: grid;
-    grid-template-rows: 180px auto;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background-color: white;
-    /*Asegurar que la tarjeta mantenga sus dimensiones*/
-    height: fit-content;
-    min-height: 400px;
-}
-
-.recipe-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    background-color: #f9f9f9;
-}
-
-.recipe-card img {
-    width: 100%;
-    height: 180px;
-    /* ALTURA FIJA */
-    object-fit: cover;
-    display: block;
-    /* Prevenir que la imagen se expanda */
-    max-height: 180px;
-    min-height: 180px;
-}
-
-.recipe-card-content {
-    display: grid;
-    grid-template-rows: auto auto 1fr;
-    gap: 10px;
-    padding: 20px;
-    min-height: 160px;
-    /* Asegurar que el contenido no afecte la imagen */
-    height: auto;
-}
-
-.recipe-card[style*="display: none"] {
-    display: none !important;
-}
-
-.recipe-card:not([style*="display: none"]) {
-    display: grid !important;
-}
-
-.recipe-card h3 {
-    font-size: 1.3rem;
-    color: #2c3e50;
-    font-weight: 600;
-    margin: 0;
-}
-
-.cardLink{
-    text-decoration: none;
-    color: inherit;
-    display: block;
-}
-
-.rating {
-    display: grid;
-    grid-template-columns: repeat(5, auto);
-    gap: 2px;
-    justify-content: start;
-}
-
-.rating i {
-    color: #FFD700;
-    font-size: 1.1rem;
-}
-
-.recipe-card p {
-    color: #555;
-    line-height: 1.5;
-    font-size: 0.95rem;
-    margin: 0;
-    align-self: end;
-}
-
-/* BARRA DE BÚSQUEDA CON GRID */
-.search-container {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    max-width: 500px;
-    width: 100%;
-    margin: 30px 0;
-}
-
-#recipeSearch {
-    padding: 12px 20px;
-    border: 2px solid #ddd;
-    border-radius: 25px 0 0 25px;
-    font-size: 1rem;
-    outline: none;
-    transition: border-color 0.3s ease;
-}
-
-#recipeSearch:focus {
-    border-color: #ff6b6b;
-}
-
-#searchButton {
-    padding: 12px 20px;
-    background: #ff6b6b;
-    color: white;
-    border: 2px solid #ff6b6b;
-    border-radius: 0 25px 25px 0;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background 0.3s ease;
-}
-
-#searchButton:hover {
-    background: #ff5252;
-}
-
-/* ESTILOS EXISTENTES MANTENIDOS */
-.title-h1 {
-    font-size: 2.5rem;
-    color: #000000;
-    margin-bottom: 15px;
-    font-weight: 700;
-    text-align: left;
-}
-
-.title-h4 {
-    font-size: 1.6rem;
-    color: #7f8c8d;
-    font-weight: 400;
-    margin-bottom: 30px;
-    text-align: left;
-}
-
+/* IMAGEN RESPONSIVA */
 .image-container {
     width: 100%;
-    margin: 20px 0;
-    border-radius: 8px;
+    max-width: min(90vw, 700px);
+    margin: clamp(0.5rem, 2.5vw, 1.25rem) auto;
+    border-radius: clamp(0.25rem, 1.5vw, 0.5rem);
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
@@ -227,173 +129,373 @@ body {
 .image-container img {
     width: 100%;
     height: auto;
+    max-height: min(50vh, 400px);
+    object-fit: cover;
     display: block;
-    transition: transform 0.3s ease;
 }
 
-.image-container img:hover {
-    transform: scale(1.02);
+/* TÍTULOS */
+.title-h1 {
+    font-size: clamp(1.25rem, 5vw, 2.25rem);
+    color: #000000;
+    margin-bottom: clamp(0.375rem, 1.5vw, 0.75rem);
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.2;
+    word-break: break-word;
+}
+
+.title-h4 {
+    font-size: clamp(0.9rem, 3.5vw, 1.5rem);
+    color: #7f8c8d;
+    font-weight: 400;
+    margin-bottom: clamp(0.75rem, 3vw, 1.5rem);
+    text-align: center;
+    line-height: 1.3;
+    word-break: break-word;
 }
 
 .description {
-    font-size: 1.2rem;
+    font-size: clamp(0.85rem, 3vw, 1.1rem);
     color: #000000;
-    line-height: 1.8;
+    line-height: 1.5;
+    text-align: center;
+    max-width: min(90vw, 700px);
+    margin: 0 auto;
+}
+
+/* BARRA DE BÚSQUEDA */
+.search-container {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    width: 100%;
+    max-width: min(90vw, 550px);
+    margin: clamp(0.75rem, 3vw, 1.5rem) auto;
+}
+
+#recipeSearch {
+    padding: clamp(0.375rem, 1.5vw, 0.625rem) clamp(0.5rem, 2vw, 1rem);
+    border: 2px solid #ddd;
+    border-radius: 25px 0 0 25px;
+    font-size: clamp(0.8rem, 2.5vw, 0.95rem);
+    width: 100%;
+    min-width: 0;
+}
+
+#searchButton {
+    padding: clamp(0.375rem, 1.5vw, 0.625rem) clamp(0.5rem, 2vw, 1rem);
+    background: #ff6b6b;
+    color: white;
+    border: 2px solid #ff6b6b;
+    border-radius: 0 25px 25px 0;
+    font-size: clamp(0.8rem, 2.5vw, 0.95rem);
+    cursor: pointer;
+    min-width: fit-content;
+}
+
+/* FILTROS - LAYOUT DE 2 COLUMNAS Y 2 FILAS */
+.filters-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 columnas */
+    grid-template-rows: auto auto;
+    /* 2 filas */
+    gap: clamp(0.75rem, 2.5vw, 1.5rem);
+    margin: clamp(1rem, 3vw, 2rem) auto;
+    padding: clamp(0.75rem, 2.5vw, 1.5rem);
+    background: #f8f9fa;
+    border-radius: clamp(0.375rem, 1.5vw, 0.625rem);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: min(95vw, 600px);
+    /* Más estrecho */
+    justify-content: center;
+    align-items: start;
+}
+
+.filter-group {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: clamp(0.375rem, 1.25vw, 0.75rem);
+    width: 100%;
+    max-width: 100%;
+}
+
+.filter-group:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.filter-group:nth-child(2) {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.clear-btn {
+    grid-column: 1 / span 2;
+    /* Ocupa ambas columnas */
+    grid-row: 2;
+    padding: clamp(0.375rem, 1.25vw, 0.625rem) clamp(0.75rem, 2.5vw, 1.25rem);
+    background: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: clamp(0.1875rem, 0.75vw, 0.375rem);
+    font-size: clamp(0.75rem, 2vw, 0.85rem);
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    justify-self: center;
+    margin-top: 0;
+    /* Eliminamos el margen superior */
+    min-width: min(100%, 200px);
+    width: auto;
+}
+
+.clear-btn:hover {
+    background: #ff5252;
+}
+
+.filter-title {
+    font-size: clamp(0.85rem, 2.25vw, 1rem);
+    color: #2c3e50;
+    font-weight: 600;
     margin: 0;
+    padding-bottom: clamp(0.125rem, 0.75vw, 0.375rem);
+    border-bottom: 2px solid #0d6b70;
+    text-align: center;
+    word-break: break-word;
+}
+
+.filter-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: clamp(0.375rem, 1.25vw, 0.625rem);
+    width: 100%;
+    justify-content: center;
+}
+
+.filter-option {
+    display: flex;
+    align-items: center;
+    gap: clamp(0.125rem, 0.75vw, 0.375rem);
+    padding: clamp(0.375rem, 1.25vw, 0.625rem);
+    background: white;
+    border-radius: clamp(0.1875rem, 0.75vw, 0.375rem);
+    border: 1px solid #ddd;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 0;
+    width: 100%;
+    justify-content: center;
+}
+
+.filter-option:hover {
+    border-color: #0d6b70;
+    background: #f0f7ff;
+}
+
+.filter-radio {
+    width: clamp(0.875rem, 2vw, 1.1rem);
+    height: clamp(0.875rem, 2vw, 1.1rem);
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.filter-label {
+    font-size: clamp(0.75rem, 2vw, 0.85rem);
+    color: #333;
+    cursor: pointer;
+    user-select: none;
+    word-break: break-word;
     text-align: center;
 }
 
-
-
-/* RESPONSIVE DESIGN CON GRID */
-@media (max-width: 1024px) {
-    .cards-container {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 25px;
-    }
-
-    .title-h1 {
-        font-size: 2.2rem;
-    }
-
-    .title-h4 {
-        font-size: 1.4rem;
-    }
-
-    /* HEADER TABLET */
-    #header {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto;
-        justify-items: center;
-        gap: 15px;
-    }
-
-    .navList {
-        grid-template-columns: repeat(3, auto);
-        gap: 15px;
-    }
+.clear-btn {
+    grid-column: 1 / -1;
+    padding: clamp(0.375rem, 1.25vw, 0.625rem) clamp(0.75rem, 2.5vw, 1.25rem);
+    background: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: clamp(0.1875rem, 0.75vw, 0.375rem);
+    font-size: clamp(0.75rem, 2vw, 0.85rem);
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    justify-self: center;
+    margin-top: clamp(0.375rem, 1.25vw, 0.75rem);
+    min-width: min(100%, 150px);
 }
 
-@media (max-width: 768px) {
-
-    /* MOBILE GRID */
-    .cards-container {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    #start,
-    #outstanding,
-    #recetas {
-        padding: 40px 15px;
-    }
-
-    .start-content {
-        gap: 20px;
-    }
-
-    .title-h1 {
-        font-size: 1.8rem;
-        text-align: center;
-    }
-
-    .title-h4 {
-        font-size: 1.2rem;
-        text-align: center;
-    }
-
-    .recipe-card {
-        grid-template-rows: 160px auto;
-    }
-
-    .recipe-card-content {
-        padding: 15px;
-        min-height: 140px;
-    }
-
-    .recipe-card h3 {
-        font-size: 1.2rem;
-    }
-
-    .recipe-card p {
-        font-size: 0.9rem;
-    }
-
-    /* HEADER MOBILE */
-    #header {
-        grid-template-rows: auto auto;
-        padding: 15px;
-    }
-
-    .navList {
-        grid-template-columns: 1fr;
-        gap: 10px;
-        text-align: center;
-    }
-
-    /* SEARCH MOBILE */
-    .search-container {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto;
-        gap: 10px;
-        max-width: 100%;
-    }
-
-    #recipeSearch {
-        border-radius: 25px;
-        text-align: center;
-    }
-
-    #searchButton {
-        border-radius: 25px;
-        width: 100%;
-    }
-
-    /* FOOTER MOBILE */
-    .containerFooter {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto;
-        gap: 20px;
-        text-align: center;
-    }
-
-    .footerLeft {
-        grid-template-columns: 1fr;
-        gap: 15px;
-        justify-items: center;
-    }
-
-    .socialLinks {
-        grid-template-columns: 1fr;
-        gap: 10px;
-    }
-
-    .footerRight {
-        grid-template-columns: 1fr;
-        gap: 10px;
-        justify-items: center;
-    }
+/* CONTENEDOR DE TARJETAS - GENERAL */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+    gap: clamp(0.5rem, 2.5vw, 1.25rem);
+    margin-top: clamp(0.75rem, 4vw, 2rem);
+    width: 100%;
+    justify-content: center;
+    justify-items: center;
 }
 
-@media (max-width: 480px) {
-    .title-h1 {
-        font-size: 1.6rem;
-    }
+/* TARJETAS DE TEMPORADA - SOLO IMAGEN Y MÁS ALTAS */
+.cards-container.temporada .temporada-card {
+    display: grid;
+    grid-template-rows: auto;
+    /* Solo la imagen */
+    border-radius: clamp(0.375rem, 1.5vw, 0.625rem);
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    max-width: min(100%, 350px);
+    width: 100%;
+    height: fit-content;
+    min-height: min(200px, 35vh);
+    /* Más altas que las normales */
+    max-height: min(300px, 45vh);
+}
 
-    .title-h4 {
-        font-size: 1.1rem;
-    }
+.cards-container.temporada .temporada-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    min-height: min(200px, 35vh);
+    max-height: min(300px, 45vh);
+}
 
-    .recipe-card {
-        grid-template-rows: 140px auto;
-    }
+/* TARJETAS NORMALES DE RECETAS */
+.recipe-card {
+    display: grid;
+    grid-template-rows: minmax(180px, min(35vh, 280px)) 1fr;
+    /* Más espacio para la imagen */
+    border-radius: clamp(0.375rem, 1.5vw, 0.625rem);
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    max-width: min(100%, 350px);
+    width: 100%;
+    height: auto;
+    min-height: 400px;
+    /* Altura mínima total */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-    .rating i {
-        font-size: 0.9rem;
-    }
+.recipe-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
 
-    .description {
-        font-size: 1rem;
-        text-align: left;
-    }
+.recipe-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    min-height: 180px;
+    max-height: min(35vh, 280px);
+    display: block;
+}
+
+/* CONTENIDO DE LAS TARJETAS - CORREGIDO */
+.recipe-card-content {
+    display: flex;
+    flex-direction: column;
+    padding: clamp(0.75rem, 2.5vw, 1.25rem);
+    height: 100%;
+    min-height: 180px;
+    /* Altura mínima para el contenido */
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.recipe-card h3 {
+    font-size: clamp(0.9rem, 3vw, 1.2rem);
+    color: #2c3e50;
+    font-weight: 600;
+    margin: 0 0 clamp(0.375rem, 1.25vw, 0.625rem) 0;
+    line-height: 1.2;
+    word-break: break-word;
+    min-height: 2.8em;
+    flex-shrink: 0;
+}
+
+.rating {
+    display: flex;
+    gap: clamp(0.0625rem, 0.375vw, 0.1875rem);
+    margin: 0 0 clamp(0.375rem, 1.25vw, 0.625rem) 0;
+    flex-wrap: wrap;
+    min-height: 1.5em;
+    flex-shrink: 0;
+}
+
+.rating i {
+    color: #FFD700 !important;
+    font-size: clamp(0.75rem, 2.25vw, 1rem);
+}
+
+.recipe-card p {
+    font-size: clamp(0.75rem, 2.25vw, 0.85rem);
+    line-height: 1.4;
+    margin: 0;
+    color: #555;
+    word-break: break-word;
+    flex-grow: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* ENLACES DENTRO DE LAS TARJETAS - MEJORADO */
+.cardLink {
+    text-decoration: none;
+    color: inherit;
+    display: grid;
+    grid-template-rows: minmax(180px, min(35vh, 280px)) 1fr;
+    height: 100%;
+}
+
+/* FOOTER - RESPONSIVO */
+.containerFooter {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: clamp(0.75rem, 3vw, 1.5rem);
+    padding: clamp(0.75rem, 3vw, 1.5rem);
+    background: #f8f9fa;
+    width: 100%;
+}
+
+.footerLeft {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: clamp(0.5rem, 2vw, 1rem);
+}
+
+.footerLogo,
+.morpheusLogo {
+    width: clamp(1.5rem, 6vw, 2.5rem);
+    height: auto;
+}
+
+.socialLinks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp(0.375rem, 1.5vw, 0.75rem);
+}
+
+.socialLinks a {
+    font-size: clamp(0.65rem, 2vw, 0.8rem);
+    text-decoration: none;
+    color: #333;
+    white-space: nowrap;
+}
+
+.footerRight {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: clamp(0.25rem, 1.5vw, 0.5rem);
+}
+
+.credit {
+    font-size: clamp(0.65rem, 2vw, 0.8rem);
+    color: #666;
 }

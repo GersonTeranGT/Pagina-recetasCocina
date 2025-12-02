@@ -45,61 +45,26 @@
     </section>
 
     <section id="outstanding">
-        <!--Añadir un carrusel que contenga tarjetas con imagenes, estrellas de valoracion y que al pulsar la imagen te rediriga a la pagina de recetas paso por paso-->
         <div class="start-content">
             <div class="text-content">
                 <h1 class="title-h1">Recetas de Temporada</h1>
-                <div class="cards-container">
+                <div class="cards-container temporada">
                     <!-- Tarjeta 1 -->
-                    <div class="recipe-card">
+                    <div class="recipe-card temporada-card">
                         <img src="https://www.shutterstock.com/image-photo/grilled-chicken-breast-cooked-vegetables-600nw-2618443825.jpg"
                             alt="Pollo a la plancha">
-                        <div class="recipe-card-content">
-                            <h3>Pollo a la plancha</h3>
-                            <div class="rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                            </div>
-                            <p>Un plato sencillo acompañado de un buen pedazo de proteína y una ensalada saludable.</p>
-                        </div>
                     </div>
 
                     <!-- Tarjeta 2 -->
-                    <div class="recipe-card">
+                    <div class="recipe-card temporada-card">
                         <img src="https://media.istockphoto.com/id/1472680285/es/foto/comida-saludable-con-pollo-a-la-parrilla-arroz-ensalada-y-verduras-servida-por-una-mujer.jpg?s=612x612&w=0&k=20&c=RafCzs-2byU6HSC2hbEkT07ZsZ5Q7j_XfAxCsXT6_f0="
                             alt="Ensalada rusa con vainitas">
-                        <div class="recipe-card-content">
-                            <h3>Ensalada rusa con vainitas</h3>
-                            <div class="rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="far fa-star"></i>
-                            </div>
-                            <p>Un plato balanceado entre proteína, vegetales y calorías para una dieta balanceada.</p>
-                        </div>
                     </div>
 
                     <!-- Tarjeta 3 -->
-                    <div class="recipe-card">
+                    <div class="recipe-card temporada-card">
                         <img src="https://c.files.bbci.co.uk/DBBF/production/_105055265_bandejapaisa.jpg"
                             alt="Costilla de cerdo al jugo">
-                        <div class="recipe-card-content">
-                            <h3>Costilla de cerdo al jugo</h3>
-                            <div class="rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <p>Este plato supera las 2000 calorías en uno solo, perfecto para darte un gusto y perder la
-                                dieta!</p>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -114,10 +79,42 @@
                     <input type="text" id="recipeSearch" placeholder="Buscar recetas por nombre...">
                     <button id="searchButton">🔍</button>
                 </div>
-                <div class="cards-container">
+                <!-- SISTEMA DE FILTROS SIMPLIFICADO -->
+                <div class="filters-container">
+                    <div class="filter-group">
+                        <h4 class="filter-title">Dificultad</h4>
+                        <div class="filter-options">
+                            <label class="filter-option">
+                                <input type="radio" name="filter" value="facil" class="filter-radio">
+                                <span class="filter-label">Fácil</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="radio" name="filter" value="dificil" class="filter-radio">
+                                <span class="filter-label">Difícil</span>
+                            </label>
+                        </div>
+                    </div>
 
+                    <div class="filter-group">
+                        <h4 class="filter-title">Tiempos</h4>
+                        <div class="filter-options">
+                            <label class="filter-option">
+                                <input type="radio" name="filter" value="rapido" class="filter-radio">
+                                <span class="filter-label">Rápido</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="radio" name="filter" value="lento" class="filter-radio">
+                                <span class="filter-label">Lento</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <button id="clearFilters" class="clear-btn">Limpiar filtros</button>
+                </div>
+
+                <div class="cards-container">
                     <!--Tarjeta de prueba-->
-                    <div class="recipe-card">
+                    <div class="recipe-card" data-dificultad="facil" data-tiempo="rapido">
                         <a href="/pages/receta1.html" class="cardLink">
                             <img src="/images/platoListo.jpeg" alt="Arroz frito con huevo">
                             <div class="recipe-card-content">
@@ -136,7 +133,7 @@
                     </div>
 
                     <!--Fila 1-Tarjeta 1-->
-                    <div class="recipe-card">
+                    <div class="recipe-card" data-dificultad="dificil" data-tiempo="lento">
                         <a href="/pages/sancocho.html" class="cardLink">
                             <img src="/images/sancocho_res.png" alt="Sancocho de res">
                             <div class="recipe-card-content">
@@ -155,7 +152,7 @@
                     </div>
 
                     <!-- Fila 1 - Tarjeta 2 -->
-                    <div class="recipe-card">
+                    <div class="recipe-card" data-dificultad="dificil" data-tiempo="rapido">
                         <a href="menestron.html" class="cardLink">
                             <img src="/images/sopa_de_menestron.png" alt="Sopa de menestron">
                             <div class="recipe-card-content">
@@ -174,7 +171,7 @@
                     </div>
 
                     <!-- Fila 1 - Tarjeta 3 -->
-                    <div class="recipe-card">
+                    <div class="recipe-card" data-dificultad="facil" data-tiempo="rapido">
                         <a href="/pages/consome.html" class="cardLink">
                             <img src="/images/consome_de_verduras.png" alt="Consome de verduras">
                             <div class="recipe-card-content">
@@ -194,7 +191,7 @@
                     </div>
 
                     <!-- Fila 2 - Tarjeta 1 -->
-                    <div class="recipe-card">
+                    <div class="recipe-card" data-dificultad="facil" data-tiempo="rapido">
                         <a href="/pages/tallarin.html" class="cardLink">
                             <img src="/images/tallarines_rojos_con_atun.png" alt="Tallarines rojos con atun">
                             <div class="recipe-card-content">
@@ -213,7 +210,7 @@
                     </div>
 
                     <!-- Fila 2 - Tarjeta 2 -->
-                    <div class="recipe-card">
+                    <div class="recipe-card" data-dificultad="dificil" data-tiempo="rapido">
                         <a href="/pages/tacos.html" class="cardLink">
                             <img src="/images/tacos_de_alambre.png" alt="Tacos de alambre">
                             <div class="recipe-card-content">
@@ -231,7 +228,7 @@
                     </div>
 
                     <!-- Fila 2 - Tarjeta 3 -->
-                    <div class="recipe-card">
+                    <div class="recipe-card" data-dificultad="dificil" data-tiempo="lento">
                         <a href="/pages/cerdo.html" class="cardLink">
                             <img src="/images/pechito_de_cerdo_al_horno.png" alt="Pechito de cerdo al horno">
                             <div class="recipe-card-content">
@@ -250,7 +247,7 @@
                     </div>
 
                     <!-- Fila 3 - Tarjeta 1 -->
-                    <div class="recipe-card">
+                    <div class="recipe-card" data-dificultad="dificil" data-tiempo="lento">
                         <a href="/pages/mechada.html" class="cardLink">
                             <img src="/images/carne_mechada_chilena.png" alt="Carne mechada chilena">
                             <div class="recipe-card-content">
@@ -269,7 +266,7 @@
                     </div>
 
                     <!-- Fila 3 - Tarjeta 2 -->
-                    <div class="recipe-card">
+                    <div class="recipe-card" data-dificultad="facil" data-tiempo="rapido">
                         <a href="/pages/polloArrz.html" class="cardLink">
                             <img src="/images/pollada_con_arroz.png" alt="Pollo con arroz">
                             <div class="recipe-card-content">
@@ -289,7 +286,7 @@
                     </div>
 
                     <!-- Fila 3 - Tarjeta 3 -->
-                    <div class="recipe-card">
+                    <div class="recipe-card" data-dificultad="facil" data-tiempo="rapido">
                         <a href="/pages/purePa.html" class="cardLink">
                             <img src="/images/pure_de_papa_con_pollo.png" alt="Pure de papa con pollo">
                             <div class="recipe-card-content">
@@ -319,7 +316,7 @@
                 <div class="socialLinks">
                     <a target="_blank" href="https://www.facebook.com/henrycavill"><i
                             class="fab fa-facebook-f"></i>Facebook</a>
-                    <a target="_blank" href="https://www.youtube.com/"><i class="fab fa-youtube"></i>YouTube</a>
+                    <a target="_blank" href="https://www.youtube.com/"><i class="fab fa-youtuabe"></i>YouTube</a>
                     <a target="_blank" href="https://www.instagram.com/henrycavill/"><i
                             class="fab fa-instagram"></i>Instagram</a>
                 </div>
