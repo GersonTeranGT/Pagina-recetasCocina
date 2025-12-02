@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tallarines con atún</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <!--FAVICON-->
+    <link rel="icon" href="/images/transparenticonmini.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/receta1.css">
+</head>
+
+<body>
+    <header id="header">
+        <h1 id="headerTitle"><img src="/images/transparentlogo.png" alt="Icono de la pagina"
+                class="titleIcon">Tallarines con atún</h1>
+        <nav id="nav">
+            <ul class="navList">
+                <li class="navItem"><a href="/index.html" id="home">Inicio</a></li>
+                <li class="navItem"><a href="/pages/recetas.html" id="recipes">Recetas</a></li>
+                <li class="navItem"><a href="/pages/nosotros.html" id="us">Nosotros</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!--Titulo principal-->
+        <h2 id="tituloR1">Cómo preparar un delicioso plato de tallarines con atún</h2>
+        <p>Pasta en salsa de tomate con atún, una combinación rápida, económica y llena de proteínas.</p>
+        <!--seccion de los ingredientes-->
+        <section id="ingredientes">
+            <h2>Ingredientes</h2>
+            <button class="toggle-btn" aria-controls="lista-ingredientes" aria-expanded="true">
+                Mostrar / Ocultar
+            </button>
+            <ul id="lista-ingredientes" class="ingredientes-list">
+                <li>1 paquete de tallarines</li>
+                <li>2 latas de atún</li>
+                <li>1 cebolla finamente picada</li>
+                <li>1 cucharada sopera de ajo molido o finamente picado</li>
+                <li>4 tomates picados rústicamente</li>
+                <li>2 cucharadas soperas de ají panca en pasta</li>
+                <li>1 pizca de comino molido</li>
+                <li>2 hojas de laurel</li>
+                <li>1 pizca de pimienta negra molida</li>
+                <li>1 chocrrito de aceite</li>
+                <li>Sal al gusto</li>
+            </ul>
+        </section>
+        <!--Pasos-->
+        <section id="pasos">
+            <h2>Pasos</h2>
+            <button class="toggle-btn" aria-controls="lista-pasos" aria-expanded="false">
+                Mostrar / Ocultar
+            </button>
+            <div id="lista-pasos" class="pasos-list" hidden>
+                <article class="paso" data-error="No lavar el arroz puede dejarlo arenoso.">
+                    <div class="paso-header">
+                        <p>Empieza cocinando la pasta en abundante agua hirviendo con una cuchara de sal y un chocrrito de aceite. Deja
+                            que se cocine entre 8 a 10 minutos, o prueba uno para asegurarte; debe sentirse firme, pero
+                            no crudo. Luego, escúrrelos y resérvalos.</p>
+                        <button class="error-btn">Advertencia</button>
+                    </div>
+                    <p class="mensaje-error" hidden></p>
+                    <img src="/images1/tallarin.png" alt="Cocinar los tallarines." class="imagen-paso">
+                </article>
+
+                <article class="paso" data-error="Si olvidas la sal, quedará sin sabor.">
+                    <div class="paso-header">
+                        <p>Aparte, en una sartén vierte un buen chorro de aceite. Cuando esté bien caliente, coloca la
+                            cebolla finamente picada y deja que se sude. Remueve esporádicamente para evitar que se
+                            queme.</p>
+                        <button class="error-btn">Advertencia</button>
+                    </div>
+                    <p class="mensaje-error" hidden></p>
+                    <img src="/images1/sofreirCebollaTalla.png" alt="Dorar la cebolla en un sarten."
+                        class="imagen-paso">
+                </article>
+
+                <article class="paso" data-error="No apagar antes ni después.">
+                    <div class="paso-header">
+                        <p>Añade el ajo, ya sea picado finamente, molido o rallado, según tu lo prefieras.</p>
+                        <button class="error-btn">Advertencia</button>
+                    </div>
+                    <p class="mensaje-error" hidden></p>
+                    <img src="/images1/agregarAjoTalla.png" alt="Agregar ajo rayado a las cebollas."
+                        class="imagen-paso">
+                </article>
+
+                <article class="paso" data-error="No apagar antes ni después.">
+                    <div class="paso-header">
+                        <p>Incorpora la pasta de ají panca junto con las especias: comino molido, pimienta negra molida
+                            y una cucharadita de sal. Cocina por unos minutos más para que se integren los sabores.</p>
+                        <button class="error-btn">Advertencia</button>
+                    </div>
+                    <p class="mensaje-error" hidden></p>
+                    <img src="/images1/agregarPastaTalla.png" alt="Agregar la pasta de aji junto con las especias."
+                        class="imagen-paso">
+                </article>
+
+                <article class="paso" data-error="No apagar antes ni después.">
+                    <div class="paso-header">
+                        <p>Licúa los tomates con un poco de agua y agrégalos a la sartén junto con el aderezo. Deja que
+                            hierva, y si deseas, ponle unas hojas de laurel para darle aroma.</p>
+                        <button class="error-btn">Advertencia</button>
+                    </div>
+                    <p class="mensaje-error" hidden></p>
+                    <img src="/images1/licuarTomates.png" alt="Licuar los tomates y agregar al sartén."
+                        class="imagen-paso">
+                </article>
+
+                <article class="paso" data-error="No apagar antes ni después.">
+                    <div class="paso-header">
+                        <p>Después de unos 15 minutos de cocción, añade el atún previamente escurrido para evitar que el
+                            exceso de líquido disuelta la salsa.</p>
+                        <button class="error-btn">Advertencia</button>
+                    </div>
+                    <p class="mensaje-error" hidden></p>
+                    <img src="/images1/atunAgregado.png" alt="Argegar el atún a la pasta." class="imagen-paso">
+                </article>
+
+                <article class="paso" data-error="No apagar antes ni después.">
+                    <div class="paso-header">
+                        <p>Remueve bien, ajusta la sazón y finalmente incorpora los tallarines. Mézclalos con cuidado
+                            para que la salsa se entrelace con la pasta. ¡Sirve los tallarines con atún en lata de
+                            inmediato y buen provecho!</p>
+                        <button class="error-btn">Advertencia</button>
+                    </div>
+                    <p class="mensaje-error" hidden></p>
+                    <img src="/images1/tallarinAgregado.png" alt="Agrega los tallarines a la salsa."
+                        class="imagen-paso">
+                    <img src="/images1/tallarinListo.png" alt="Tallarines listos para servir." class="imagen-paso">
+                </article>
+            </div>
+        </section>
+        <!--consejos-->
+        <section id="consejos">
+            <h2>Consejos</h2>
+            <ul class="consejos-list">
+                <li>Agrega mantequilla para más sabor.</li>
+                <li>Decora con una hoja de cilantro.</li>
+                <li>Puedes acompañarlo con aguacate o atún.</li>
+                <li>No olvides tomar la foto para Instagram.</li>
+            </ul>
+        </section>
+        <!--video-->
+        <section id="video">
+            <h2>Video para una ayuda extra u otra forma de preparación.</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/1r_Z50_HQnE?si=kHWal5PR8ar3w3Nf"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <div class="containerFooter">
+            <div class="footerLeft">
+                <img src="/images/transparentseclogo.png" alt="Logo sabor del dia" class="footerLogo">
+                <div class="socialLinks">
+                    <a target="_blank" href="https://www.facebook.com/henrycavill"><i
+                            class="fab fa-facebook-f"></i>Facebook</a>
+                    <a target="_blank" href="https://www.youtube.com/"><i class="fab fa-youtube"></i>YouTube</a>
+                    <a target="_blank" href="https://www.instagram.com/henrycavill/"><i
+                            class="fab fa-instagram"></i>Instagram</a>
+                </div>
+            </div>
+            <div class="footerRight">
+                <img src="/images/morpheusLogo.png" alt="Logo Morpheus" class="morpheusLogo">
+                <p class="credit">Diseñado por Morpheus Enterprise</p>
+            </div>
+        </div>
+    </footer>
+    <script src="/js/receta1.js"></script>
+</body>
+
+</html>

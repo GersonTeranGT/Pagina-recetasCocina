@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arroz frito con huevo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <!--FAVICON-->
+    <link rel="icon" href="/images/transparenticonmini.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/receta1.css">
+</head>
+
+<body>
+    <header id="header">
+        <h1 id="headerTitle"><img src="/images/transparentlogo.png" alt="Icono de la pagina" class="titleIcon">Arroz
+            frito con huevo</h1>
+        <nav id="nav">
+            <ul class="navList">
+                <li class="navItem"><a href="/index.html" id="home">Inicio</a></li>
+                <li class="navItem"><a href="/pages/recetas.html" id="recipes">Recetas</a></li>
+                <li class="navItem"><a href="/pages/nosotros.html" id="us">Nosotros</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!--Titulo principal-->
+        <h2 id="tituloR1">Cómo hacer un delicioso sancocho de res.</h2>
+        <p>Un nutritivo caldo colombiano con carne, yuca, plátano y maíz, lleno de sabor y tradición.</p>
+        <!--seccion de los ingredientes-->
+        <section id="ingredientes">
+            <h2>Ingredientes</h2>
+            <button class="toggle-btn" aria-controls="lista-ingredientes" aria-expanded="true">
+                Mostrar / Ocultar
+            </button>
+            <ul id="lista-ingredientes" class="ingredientes-list">
+                <li>400 gramos de carne de res</li>
+                <li>2 muslos de pollo</li>
+                <li>3 papas</li>
+                <li>1 trozo de yuca</li>
+                <li>1 mazorca de maíz</li>
+                <li>1 zanahoria</li>
+                <li>1 trozo de calabaza</li>
+                <li>1 cebolla</li>
+                <li>2 dientes de ajo</li>
+                <li>1 pimentón</li>
+                <li>800 mililitros de agua filtrada</li>
+                <li>Cilantro fresco al gusto</li>
+                <li>Aceite para sofreír</li>
+                <li>Sal al gusto</li>
+            </ul>
+        </section>
+        <!--Pasos-->
+        <section id="pasos">
+            <h2>Pasos</h2>
+            <button class="toggle-btn" aria-controls="lista-pasos" aria-expanded="false">
+                Mostrar / Ocultar
+            </button>
+            <div id="lista-pasos" class="pasos-list" hidden>
+                <article class="paso" data-error="No lavar el arroz puede dejarlo arenoso.">
+                    <div class="paso-header">
+                        <p>Lava y corta la cebolla, los ajos y el pimentón en cuadritos pequeños para crear una base de
+                            sabor aromática y deliciosa.</p>
+                        <button class="error-btn">Advertencia</button>
+                    </div>
+                    <p class="mensaje-error" hidden></p>
+                    <img src="/images1/cortarVerduras.png" alt="Vegetales crtados" class="imagen-paso">
+                </article>
+
+                <article class="paso" data-error="Si olvidas la sal, quedará sin sabor.">
+                    <div class="paso-header">
+                        <p>Lleva los vegetales picados a una olla de presión con un poco de aceite caliente y sofríe por
+                            unos minutos hasta que estén ligeramente dorados. Corta la carne de res en dos trozos
+                            grandes y agrégala a la olla junto con los muslos de pollo. Dora por ambos lados para sellar
+                            y potenciar el sabor del caldo.</p>
+                        <button class="error-btn">Advertencia</button>
+                    </div>
+                    <p class="mensaje-error" hidden></p>
+                    <img src="/images1/carnePicada.png" alt="Agregar carne y pollo a la olla." class="imagen-paso">
+                </article>
+
+                <article class="paso" data-error="No apagar antes ni después.">
+                    <div class="paso-header">
+                        <p>Mientras se doran las carnes, pela y corta las papas, la yuca, la zanahoria y la auyama en
+                            trozos medianos. También corta la mazorca en ruedas del grosor que prefieras.</p>
+                        <button class="error-btn">Advertencia</button>
+                    </div>
+                    <p class="mensaje-error" hidden></p>
+                    <img src="/images1/cortarYuca.png" alt="Cortar el resto de las verduras." class="imagen-paso">
+                </article>
+
+                <article class="paso" data-error="Si cae cáscara, tendrás calcio extra.">
+                    <div class="paso-header">
+                        <p>Agrega todas las verduras a la olla, añade los 800 ml de agua y sal al gusto. Tapa la olla de
+                            presión y cocina durante 15 minutos desde que comience a liberar vapor.</p>
+                        <button class="error-btn">Advertencia</button>
+                    </div>
+                    <p class="mensaje-error" hidden></p>
+                    <img src="/images1/yucaHervida.png" alt="Agregar al agua el resto de los vegetales."
+                        class="imagen-paso">
+                </article>
+
+                <article class="paso" data-error="No te distraigas ni por un segundo si no, será arroz quemado :).">
+                    <div class="paso-header">
+                        <p>Una vez transcurrido el tiempo de cocción, apaga el fuego y deja reposar el sancocho por
+                            unos 10 minutos con la olla cerrada para que los sabores se integren mejor. Al momento de
+                            servir, agrega cilantro fresco picado al gusto.</p>
+                        <button class="error-btn">Advertencia</button>
+                    </div>
+                    <p class="mensaje-error" hidden></p>
+                    <img src="/images1/sancochoListo.png" alt="Sancocho listo para servir." class="imagen-paso">
+                </article>
+            </div>
+        </section>
+        <!--consejos-->
+        <section id="consejos">
+            <h2>Consejos</h2>
+            <ul class="consejos-list">
+                <li>Agrega mantequilla para más sabor.</li>
+                <li>Decora con una hoja de cilantro.</li>
+                <li>Puedes acompañarlo con aguacate o atún.</li>
+                <li>No olvides tomar la foto para Instagram.</li>
+            </ul>
+        </section>
+        <!--video-->
+        <section id="video">
+            <h2>Video para una ayuda extra u otra forma de preparar.</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/6ir1iBf8n7k?si=YslXlUyhkvxJt7Xh"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <div class="containerFooter">
+            <div class="footerLeft">
+                <img src="/images/transparentseclogo.png" alt="Logo sabor del dia" class="footerLogo">
+                <div class="socialLinks">
+                    <a target="_blank" href="https://www.facebook.com/henrycavill"><i
+                            class="fab fa-facebook-f"></i>Facebook</a>
+                    <a target="_blank" href="https://www.youtube.com/"><i class="fab fa-youtube"></i>YouTube</a>
+                    <a target="_blank" href="https://www.instagram.com/henrycavill/"><i
+                            class="fab fa-instagram"></i>Instagram</a>
+                </div>
+            </div>
+            <div class="footerRight">
+                <img src="/images/morpheusLogo.png" alt="Logo Morpheus" class="morpheusLogo">
+                <p class="credit">Diseñado por Morpheus Enterprise</p>
+            </div>
+        </div>
+    </footer>
+    <script src="/js/receta1.js"></script>
+</body>
+
+</html>
