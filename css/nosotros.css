@@ -1,4 +1,3 @@
-
 .nosotros {
     max-width: 1100px;
     margin: auto;
@@ -26,21 +25,107 @@
 .nosotros-header p {
     margin-top: 15px;
     line-height: 1.6;
+    text-align: justify;
 }
 
 .icono-cocina img {
-    width: 160px;
-}
+max-width: 100%;
+    height: auto;}
 
-.galeria-equipo {
-    margin-top: 30px;
+/* -------------------------------------- */
+/* Estilos para la Cuadrícula de Imágenes */
+/* -------------------------------------- */
+
+.equipo-fotos-grid {
+    /* Usamos CSS Grid para el diseño */
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 15px;
+    /* Define 3 columnas de igual tamaño (1 fracción de espacio) */
+    grid-template-columns: repeat(3, 1fr); 
+    /* Espacio entre las celdas de la cuadrícula */
+    gap: 20px; 
+    width: auto ;
+    margin: 0 ; /* Centra el contenedor */
 }
 
-.galeria-equipo img {
-    width: 100%;
-    border-radius: 10px;
-    object-fit: cover;
+/* Estilo para cada contenedor de imagen */
+.foto-item {
+    background-color: #fff;
+    border-radius: 15px;
+    overflow: hidden; /* Asegura que la imagen no se salga de los bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra suave */
+}
+
+/* Estilo para todas las imágenes dentro de la cuadrícula */
+.foto-item img {
+    width: 100%; /* La imagen ocupa todo el ancho del contenedor */
+    height: 100%; /* Ajusta la altura */
+    /* Asegura que la imagen cubra el área sin distorsionarse, recortando si es necesario */
+    object-fit: cover; 
+    /* Transición suave para efectos hover */
+    transition: transform 0.3s ease-in-out; 
+}
+
+.foto-item:hover img {
+    /* Un ligero zoom al pasar el ratón */
+    transform: scale(1.05); 
+}
+
+/* -------------------------------------- */
+/* Ajustes específicos para el diseño de la imagen original */
+/* -------------------------------------- */
+
+/* La primera foto (fila superior izquierda) que abarca 2 columnas */
+.foto-principal {
+    grid-column: span 2; /* Hace que esta celda ocupe el espacio de 2 columnas */
+    /* Fija una altura para la foto principal */
+    height: 390px; 
+}
+
+/* La foto de la parrilla (fila superior derecha) */
+.foto-secundaria {
+    /* Fija una altura para las fotos de la fila superior */
+    height: 300px;
+    width: 450px;
+    margin-top: 50px;
+}
+
+/* Las fotos de la fila central y las dos de la fila inferior */
+.foto-item:not(.foto-principal):not(.foto-secundaria) {
+    /* Fija una altura para el resto de las fotos para alinearlas */
+    height: 250px; 
+}
+
+
+/* -------------------------------------- */
+/* Diseño Responsivo para Móviles y Tabletas */
+/* -------------------------------------- */
+
+@media (max-width: 900px) {
+    .equipo-fotos-grid {
+        /* En pantallas medianas (tabletas), volvemos a 2 columnas */
+        grid-template-columns: repeat(2, 1fr); 
+    }
+
+    .foto-principal {
+        /* La foto principal ahora solo abarca 2 columnas (el ancho completo) */
+        grid-column: span 2; 
+    }
+}
+
+@media (max-width: 500px) {
+    .equipo-fotos-grid {
+        /* En pantallas pequeñas (móviles), una sola columna */
+        grid-template-columns: 1fr; 
+    }
+
+    .foto-principal {
+        /* En móviles, abarca 1 columna */
+        grid-column: span 1; 
+    }
+
+    /* Reducimos la altura en móviles para que no sean demasiado grandes */
+    .foto-item {
+        height: 400px !important; 
+        width: auto;
+    }
 }
