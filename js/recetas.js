@@ -34,13 +34,13 @@ document.addEventListener('DOMContentLoaded', function () {
         'consome de verduras',
         'tallarines rojos con atun',
         'pure de papa con pollo',
-        'pollo con arroz'
+        'pollo con arroz',
+        'tacos de carne'
     ];
 
     const recetasDificiles = [
         'sancocho de res',
         'sopa de menestron',
-        'tacos de carne',
         'pechito de cerdo al horno',
         'carne mechada chilena'
     ];
