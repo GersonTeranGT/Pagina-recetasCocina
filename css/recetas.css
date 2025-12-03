@@ -15,58 +15,6 @@ body {
     background-color: #fffaf3;
 }
 
-/* HEADER - IDÉNTICO AL ORIGINAL */
-#header {
-    background-color: #0d6b70;
-    color: white;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    padding: 25px 30px;
-    gap: 15px;
-}
-
-/* Título de la página - IDÉNTICO */
-#headerTitle {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 1.5rem;
-    margin: 0;
-}
-
-.titleIcon {
-    width: 50px;
-    height: auto;
-}
-
-/* Barra de navegación - IDÉNTICA */
-#nav .navList {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin: 0;
-    padding: 0;
-}
-
-#nav .navItem {
-    margin: 0 10px;
-}
-
-#nav .navItem a {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    padding: 5px 10px;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-#nav .navItem a:hover {
-    background-color: #51b04a;
-}
 
 /* SECCIONES PRINCIPALES - RESPONSIVAS */
 #start,
@@ -422,30 +370,7 @@ body {
 
 /* TABLETS PEQUEÑAS (600px a 768px) */
 @media (max-width: 768px) {
-    #header {
-        padding: 20px 25px;
-    }
-
-    #headerTitle {
-        font-size: 1.3rem;
-    }
-
-    .titleIcon {
-        width: 40px;
-    }
-
-    #nav .navList {
-        gap: 8px;
-    }
-
-    #nav .navItem {
-        margin: 0 5px;
-    }
-
-    #nav .navItem a {
-        font-size: 0.9rem;
-        padding: 4px 8px;
-    }
+    
 
     #start,
     #outstanding,
@@ -506,33 +431,7 @@ body {
 
 /* MÓVILES (480px a 600px) */
 @media (max-width: 600px) {
-    #header {
-        flex-direction: column;
-        text-align: center;
-        gap: 15px;
-        padding: 15px 20px;
-    }
-
-    #headerTitle {
-        font-size: 1.2rem;
-    }
-
-    .titleIcon {
-        width: 35px;
-    }
-
-    #nav .navList {
-        justify-content: center;
-    }
-
-    #nav .navItem {
-        margin: 0 3px;
-    }
-
-    #nav .navItem a {
-        font-size: 0.85rem;
-        padding: 3px 6px;
-    }
+    
 
     .title-h1 {
         font-size: 1.3rem;
@@ -583,41 +482,12 @@ body {
         font-size: 0.85rem;
     }
 
-    .containerFooter {
-        flex-direction: column;
-        text-align: center;
-        gap: 20px;
-    }
+
 }
 
 /* MÓVILES MUY PEQUEÑOS (hasta 480px) */
 @media (max-width: 480px) {
-    #header {
-        padding: 12px 15px;
-    }
-
-    #headerTitle {
-        font-size: 1.1rem;
-    }
-
-    .titleIcon {
-        width: 30px;
-    }
-
-    #nav .navList {
-        flex-direction: column;
-        gap: 5px;
-    }
-
-    #nav .navItem {
-        margin: 0;
-    }
-
-    #nav .navItem a {
-        display: block;
-        text-align: center;
-        padding: 5px 10px;
-    }
+    
 
     .title-h1 {
         font-size: 1.2rem;
@@ -667,29 +537,11 @@ body {
         padding: 12px;
     }
 
-    .footerLogo {
-        width: 80px;
-    }
-
-    .morpheusLogo {
-        width: 140px;
-    }
 }
 
 /* PANTALLAS MUY PEQUEÑAS (hasta 320px) */
 @media (max-width: 320px) {
-    #headerTitle {
-        font-size: 1rem;
-    }
-
-    .titleIcon {
-        width: 25px;
-    }
-
-    #nav .navItem a {
-        font-size: 0.8rem;
-        padding: 4px 8px;
-    }
+    
 
     .title-h1 {
         font-size: 1.1rem;
